@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Dark Mode Brown & Cream Palette -->
+    <color name="primary_brown">#C4A777</color> <!-- Light Brown -->
+    <color name="primary_brown_dark">#A1887F</color> <!-- Medium Brown -->
+    <color name="primary_cream">#2D2922</color> <!-- Dark Cream -->
+    <color name="secondary_cream">#3A342B</color> <!-- Medium Dark Cream -->
+    <color name="accent_gold">#D4B483</color> <!-- Warm Gold Accent -->
+
+    <!-- Background & Surface Colors -->
+    <color name="background_light">#1C1A16</color> <!-- Very Dark Cream -->
+    <color name="surface_light">#24211B</color> <!-- Dark Surface -->
+    <color name="surface_cream">#2D2922</color> <!-- Dark Cream Surface -->
+    <color name="card_background">#FAF6F0</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary_dark">#ECEFF1</color> <!-- Light Cream -->
+    <color name="text_secondary_dark">#B0BEC5</color> <!-- Light Gray-Brown -->
+    <color name="text_on_primary">#212121</color> <!-- Dark on light -->
+    <color name="text_on_cream">#ECEFF1</color> <!-- Light cream on dark -->
+    <color name="text_icon">#8B7355</color>
+
+    <!-- Semantic Colors -->
+    <color name="success_green">#66BB6A</color>
+    <color name="warning_orange">#FFA726</color>
+    <color name="error_red">#EF5350</color>
+    <color name="info_blue">#42A5F5</color>
+
+    <!-- Status & Badge -->
+    <color name="badge_red">#EF5350</color>
+    <color name="divider_color">#3A342B</color>
+</resources>

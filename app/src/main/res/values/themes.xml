@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Kasir" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_brown</item>
+        <item name="colorSecondary">@color/accent_gold</item>
+    </style>
+
+    <style name="Theme.Kasir" parent="Base.Theme.Kasir" />
+</resources>

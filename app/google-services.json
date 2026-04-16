@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "258993007837",
+    "project_id": "cafebianca",
+    "storage_bucket": "cafebianca.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258993007837:android:e3524368fc5506d0dabf34",
+        "android_client_info": {
+          "package_name": "com.biancaputri.pos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0f4QnOb9buXH7BA0A3TSRiM_N1rlHoK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258993007837:android:0918d0bb5392cee0dabf34",
+        "android_client_info": {
+          "package_name": "com.example.cafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0f4QnOb9buXH7BA0A3TSRiM_N1rlHoK8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

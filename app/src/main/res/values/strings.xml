@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">kasir</string>
+    <string name="Kategori">Cari Kategori</string>
+    <string name="btn_tambah_kategori">Tambah Kategori</string>
+
+    <string name="sapa_pagi">Selamat Pagi, %1$s</string>
+    <string name="sapa_siang">Selamat Siang, %1$s</string>
+    <string name="sapa_sore">Selamat Sore, %1$s</string>
+    <string name="sapa_malam">Selamat Malam, %1$s</string>
+
+    <string-array name="spinnerStatus">
+        <item>Aktif</item>
+        <item>Non-Aktif</item>
+    </string-array>
+</resources>

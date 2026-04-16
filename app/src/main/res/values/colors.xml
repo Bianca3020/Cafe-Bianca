@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brown & Cream Palette -->
+    <color name="primary_brown">#8B7355</color>
+    <color name="primary_brown_dark">#6B5538</color>
+    <color name="primary_cream">#F5F0E6</color>
+    <color name="secondary_cream">#FFF8E1</color>
+    <color name="accent_gold">#D4B483</color>
+
+    <!-- Background & Surface Colors -->
+    <color name="background_light">#FAF6F0</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_cream">#FFFBF0</color>
+    <color name="card_background">#8B7355</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary_dark">#5D4037</color>
+    <color name="text_secondary_dark">#795548</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_cream">#5D4037</color>
+    <color name="text_icon">#8B7355</color>
+
+    <!-- Semantic Colors -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#EF5350</color>
+    <color name="info_blue">#42A5F5</color>
+
+    <!-- Status & Badge -->
+    <color name="badge_red">#EF5350</color>
+    <color name="divider_color">#E0D6C8</color>
+</resources>

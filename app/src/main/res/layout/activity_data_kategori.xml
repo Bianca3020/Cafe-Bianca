@@ -37,7 +37,7 @@
                 android:id="@+id/edtSearchKategori"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/Kategori"
+                android:hint="@string/mencari_kategori"
                 android:background="@android:color/transparent"
                 android:textSize="14sp"
                 android:textColor="#222222"

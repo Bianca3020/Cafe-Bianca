@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="14dp"
             android:layout_weight="1"
-            android:text="Kategori"
+            android:text="@string/kategori"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#222222"/>
@@ -38,7 +38,7 @@
             android:id="@+id/btnAtur"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
-            android:text="Atur"
+            android:text="@string/mengatur"
             android:textSize="16sp"
             android:textAllCaps="false"
             android:backgroundTint="@color/card_background"

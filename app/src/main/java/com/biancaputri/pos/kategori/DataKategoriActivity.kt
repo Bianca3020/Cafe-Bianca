@@ -1,126 +1,60 @@
-package com.biancaputri.pos.kategori
+package com.biancaputri.pos.adapter
 
-import android.content.Intent
-import android.os.Bundle
+import android.content.Context
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.biancaputri.pos.R
-import com.biancaputri.pos.adapter.DetailKategoriAdapter
 import com.biancaputri.pos.model.ModelKategori
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.util.Calendar
 
-// --- VIEW MODEL ---
-class DataKategoriViewModel : ViewModel() {
-    val kategoriList = MutableLiveData<ArrayList<ModelKategori>>()
+class DetailKategoriAdapter(
+    private var kategoriList: MutableList<ModelKategori>
+) : RecyclerView.Adapter<DetailKategoriAdapter.KategoriViewHolder>() {
 
-    init {
-        // Temporary dummy data
-        val dummyList = arrayListOf(
-            ModelKategori("Kategori 1", "Deskripsi 1"),
-            ModelKategori("Kategori 2", "Deskripsi 2")
-        )
-        kategoriList.value = dummyList
+    private lateinit var appContext: Context
+
+    interface OnClickListener {
+        fun onItemClick(kategori: ModelKategori)
     }
-}
 
-// --- ACTIVITY ---
-class DataKategoriActivity : AppCompatActivity() {
+    private var listener: OnClickListener? = null
 
-    private val viewModel: DataKategoriViewModel by viewModels()
+    fun setOnClickListener(listener: OnClickListener) {
+        this.listener = listener
+    }
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var tvKosong: TextView
-    private lateinit var tvGreeting: TextView
-    private lateinit var searchView: SearchView
-    private lateinit var fabAddKategori: FloatingActionButton
-    private lateinit var adapter: DetailKategoriAdapter
+    fun updateData(newList: List<ModelKategori>) {
+        kategoriList.clear()
+        kategoriList.addAll(newList)
+        notifyDataSetChanged()
+    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_data_kategori)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KategoriViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_data_kategori, parent, false)
+        appContext = parent.context
+        return KategoriViewHolder(view)
+    }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+    override fun getItemCount(): Int = kategoriList.size
 
-        init()
-        updateGreeting("Bianca") // Dynamic & Multi-language
-        setupSearch()
+    override fun onBindViewHolder(holder: KategoriViewHolder, position: Int) {
+        val kategori = kategoriList[position]
+        holder.bind(kategori)
 
-        // FAB Logic to move to Add Screen
-        fabAddKategori.setOnClickListener {
-            val intent = Intent(this, ModKategoriActivity::class.java)
-            startActivity(intent)
-        }
-
-        val layoutManager = LinearLayoutManager(this)
-        layoutManager.reverseLayout = true
-        layoutManager.stackFromEnd = true
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-
-        viewModel.kategoriList.observe(this) { list ->
-            adapter = DetailKategoriAdapter(list)
-            recyclerView.adapter = adapter
-
-            if (list.isEmpty()) {
-                tvKosong.visibility = View.VISIBLE
-            } else {
-                tvKosong.visibility = View.GONE
-            }
+        holder.itemView.setOnClickListener {
+            listener?.onItemClick(kategori)
         }
     }
 
-    private fun init() {
-        recyclerView = findViewById(R.id.recyclerViewKategori)
-        tvKosong = findViewById(R.id.tvKosong)
-        tvGreeting = findViewById(R.id.tvGreeting)
-        searchView = findViewById(R.id.edtSearchKategori)
-        fabAddKategori = findViewById(R.id.fabAddKategori)
+    inner class KategoriViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        adapter = DetailKategoriAdapter(arrayListOf())
-        recyclerView.adapter = adapter
-    }
+        private val tvNama: TextView = itemView.findViewById(R.id.tvNamaKategori)
 
-    // --- MULTI-LANGUAGE GREETING LOGIC ---
-    private fun updateGreeting(userName: String) {
-        val calendar = Calendar.getInstance()
-        val hour = calendar.get(Calendar.HOUR_OF_DAY)
-
-        // Pulls the correct string ID based on time
-        val greetingRes = when (hour) {
-            in 0..10 -> R.string.sapa_pagi
-            in 11..14 -> R.string.sapa_siang
-            in 15..18 -> R.string.sapa_sore
-            else -> R.string.sapa_malam
+        fun bind(kategori: ModelKategori) {
+            tvNama.text = kategori.namaKategori ?: "-"
         }
-
-        // getString(greetingRes) automatically handles EN vs ID translations
-        val greetingWord = getString(greetingRes)
-        tvGreeting.text = "$greetingWord, $userName! ✨"
-    }
-
-    private fun setupSearch() {
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean = false
-            override fun onQueryTextChange(newText: String?): Boolean {
-                // Filter logic can be added here
-                return true
-            }
-        })
     }
 }

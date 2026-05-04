@@ -1,32 +1,41 @@
 package com.biancaputri.pos
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.biancaputri.pos.kategori.DataKategoriActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val cvKategori = findViewById<CardView>(R.id.cvKategori)
-        cvKategori.setOnClickListener {
-            val intent = Intent(this, DataKategoriActivity::class.java)
-            startActivity(intent)
+        val greetingText = findViewById<TextView>(R.id.greetingTextView)
+        val dateText = findViewById<TextView>(R.id.dateTextView)
+
+        // 🔥 Ambil waktu sekarang
+        val calendar = Calendar.getInstance()
+        val hour = calendar.get(Calendar.HOUR_OF_DAY)
+
+        // 🔥 Logic greeting berdasarkan jam
+        val greeting = when (hour) {
+            in 0..10 -> getString(R.string.sapa_pagi)
+            in 11..14 -> getString(R.string.sapa_siang)
+            in 15..17 -> getString(R.string.sapa_sore)
+            else -> getString(R.string.sapa_malam)
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        greetingText.text = greeting
+
+        // 🔥 Format tanggal (Indonesia)
+        val localeID = Locale("id", "ID")
+        val dateFormat = SimpleDateFormat("EEEE, dd MMMM yyyy", localeID)
+        val currentDate = dateFormat.format(Date())
+
+        dateText.text = currentDate
     }
 }

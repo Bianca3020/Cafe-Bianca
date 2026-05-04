@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">kasir</string>
-    <string name="Kategori">Cari Kategori</string>
+    <string name="mencari_kategori">Cari Kategori</string>
+    <string name="kategori">Kategori</string>
     <string name="btn_tambah_kategori">Tambah Kategori</string>
+    <string name="mengatur">Atur</string>
 
     <string name="sapa_pagi">Selamat Pagi, %1$s</string>
     <string name="sapa_siang">Selamat Siang, %1$s</string>

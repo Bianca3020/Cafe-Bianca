@@ -9,6 +9,9 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Kasir">
         <activity
+            android:name=".item_data_produk"
+            android:exported="false" />
+        <activity
             android:name=".viewmodel.DataProdukViewModel"
             android:exported="false" />
         <activity

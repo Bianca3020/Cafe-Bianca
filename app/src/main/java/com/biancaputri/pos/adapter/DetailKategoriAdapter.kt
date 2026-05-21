@@ -3,22 +3,29 @@ package com.biancaputri.pos.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView // 1. FIX: Added this import!
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.biancaputri.pos.R
 import com.biancaputri.pos.model.ModelKategori
 
-class DetailKategoriAdapter(private val kategoriList: List<ModelKategori>) :
-    RecyclerView.Adapter<DetailKategoriAdapter.KategoriViewHolder>() {
+class DetailKategoriAdapter(
+    private val kategoriList: MutableList<ModelKategori>
+) : RecyclerView.Adapter<DetailKategoriAdapter.KategoriViewHolder>() {
 
-    interface OnItemClick {
+    interface OnClickListener {
         fun onItemClick(kategori: ModelKategori)
     }
 
-    private var listener: OnItemClick? = null
+    private var listener: OnClickListener? = null
 
-    fun setOnClickListener(listener: OnItemClick) {
+    fun setOnClickListener(listener: OnClickListener) {
         this.listener = listener
+    }
+
+    fun updateData(newList: List<ModelKategori>) {
+        kategoriList.clear()
+        kategoriList.addAll(newList)
+        notifyItemRangeChanged(0, kategoriList.size)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KategoriViewHolder {
@@ -34,16 +41,12 @@ class DetailKategoriAdapter(private val kategoriList: List<ModelKategori>) :
 
     override fun getItemCount(): Int = kategoriList.size
 
-    inner class KategoriViewHolder(itemView: View) :
-        RecyclerView.ViewHolder(itemView) {
+    inner class KategoriViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        // 2. FIX: Moved the findViewById here to make the code faster (Standard ViewHolder pattern!)
         private val tvNama = itemView.findViewById<TextView>(R.id.tvNamaKategori)
 
         fun bind(kategori: ModelKategori) {
-            // 3. FIX: Make sure 'nama' matches the variable in your ModelKategori class!
-            tvNama.text = kategori.namaKategori
-
+            tvNama.text = kategori.namaKategori ?: "-"
             itemView.setOnClickListener {
                 listener?.onItemClick(kategori)
             }

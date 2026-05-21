@@ -398,7 +398,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="Layanan"
+                                    android:text="Produk"
                                     android:textSize="12sp"/>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>

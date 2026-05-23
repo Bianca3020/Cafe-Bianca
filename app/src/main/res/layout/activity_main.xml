@@ -35,36 +35,25 @@
                     android:text="@string/sapa_pagi"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    tools:textColor="@color/text_primary_dark"/>
-
-                <TextView
-                    android:id="@+id/userNameTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Admin"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="4dp"
-                    tools:textColor="@color/text_primary_dark"/>
+                    android:textColor="@color/text_primary"/>
 
                 <TextView
                     android:id="@+id/dateTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Senin, 20 Januari 2026"
-                    android:textColor="@color/text_primary_dark"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp"
                     android:layout_marginTop="8dp"/>
             </LinearLayout>
 
-            <!-- Card Statistik -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
-                tools:cardBackgroundColor="@color/card_background">
+                app:cardBackgroundColor="@color/surface_variant">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,7 +67,7 @@
                         android:text="Hari Ini"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        tools:textColor="@color/text_primary_dark"/>
+                        android:textColor="@color/text_primary"/>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -87,7 +76,6 @@
                         android:orientation="horizontal"
                         android:weightSum="3">
 
-                        <!-- Transaksi -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -100,7 +88,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="12"
-                                android:textColor="@color/text_primary_dark"
+                                android:textColor="@color/text_primary"
                                 android:textSize="24sp"
                                 android:textStyle="bold"/>
 
@@ -109,10 +97,9 @@
                                 android:layout_height="wrap_content"
                                 android:text="Transaksi"
                                 android:textSize="12sp"
-                                tools:textColor="@color/text_primary_dark"/>
+                                android:textColor="@color/text_primary"/>
                         </LinearLayout>
 
-                        <!-- Pendapatan -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -127,17 +114,16 @@
                                 android:text="Rp 1.250.000"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                tools:textColor="@color/text_primary_dark"/>
+                                android:textColor="@color/text_primary"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Pendapatan"
                                 android:textSize="12sp"
-                                tools:textColor="@color/text_primary_dark"/>
+                                android:textColor="@color/text_primary"/>
                         </LinearLayout>
 
-                        <!-- Pelanggan -->
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -152,41 +138,16 @@
                                 android:text="45"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
-                                tools:textColor="@color/text_primary_dark"/>
+                                android:textColor="@color/text_primary"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Pelanggan"
                                 android:textSize="12sp"
-                                tools:textColor="@color/text_primary_dark"/>
+                                android:textColor="@color/text_primary"/>
                         </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Menu Utama -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Menu Utama"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        tools:textColor="@color/text_primary_dark"/>
-
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -194,8 +155,7 @@
                         android:columnCount="3"
                         android:rowCount="2">
 
-                        <!-- Transaksi -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/transactionCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -220,19 +180,19 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:src="@drawable/ic_transaction"
-                                    app:tint="@android:color/black"/>
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:text="Transaksi"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Kategori -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/customerCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -255,20 +215,20 @@
                                 <ImageView
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
-                                    android:src="@drawable/ic_customers"
-                                    app:tint="@android:color/black"/>
+                                    android:src="@drawable/ic_tag"
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
-                                    android:text="Pelanggan"
-                                    android:textSize="12sp"/>
+                                    android:text="Kategori"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Laporan -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/reportCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -292,153 +252,155 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:src="@drawable/ic_reports"
-                                    app:tint="@android:color/black"/>
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:text="Laporan"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
                     </GridLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Menu Tambahan -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Menu Tambahan"
-                        android:textSize="18sp"
-                        android:textStyle="bold"/>
-
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:columnCount="3"
-                        android:rowCount="2">
-
-                        <!-- Akun -->
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/accountCard"
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:layout_columnWeight="1"
-                            android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
-
-                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:clickable="true"
-                                android:focusable="true">
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="16dp"
+                                app:cardCornerRadius="12dp"
+                                app:cardElevation="4dp"
+                                app:cardBackgroundColor="@color/surface_variant">
 
-                                <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:src="@drawable/ic_account"
-                                    app:tint="@android:color/black"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
+                                <LinearLayout
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
-                                    android:text="Akun"
-                                    android:textSize="12sp" />
+                                    android:orientation="vertical"
+                                    android:padding="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Menu Tambahan"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/text_primary"/>
+
+                                    <GridLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="12dp"
+                                        android:columnCount="3"
+                                        android:rowCount="2">
+
+                                        <!-- Akun -->
+                                        <com.google.android.material.card.MaterialCardView
+                                            android:id="@+id/accountCard"
+                                            android:layout_width="0dp"
+                                            android:layout_height="100dp"
+                                            android:layout_columnWeight="1"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="4dp"
+                                            app:cardCornerRadius="8dp"
+                                            app:cardElevation="2dp">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:orientation="vertical"
+                                                android:clickable="true"
+                                                android:focusable="true">
+
+                                                <ImageView
+                                                    android:layout_width="48dp"
+                                                    android:layout_height="48dp"
+                                                    android:src="@drawable/ic_account"
+                                                    app:tint="@color/icon_color"/>
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="4dp"
+                                                    android:text="Akun"
+                                                    android:textSize="12sp"
+                                                    android:textColor="@color/text_primary"/>
+                                            </LinearLayout>
+                                        </com.google.android.material.card.MaterialCardView>
+
+                                        <com.google.android.material.card.MaterialCardView
+                                            android:id="@+id/serviceCard"
+                                            android:layout_width="0dp"
+                                            android:layout_height="100dp"
+                                            android:layout_columnWeight="1"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="4dp"
+                                            app:cardCornerRadius="8dp"
+                                            app:cardElevation="2dp">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:orientation="vertical"
+                                                android:clickable="true"
+                                                android:focusable="true">
+
+                                                <ImageView
+                                                    android:layout_width="48dp"
+                                                    android:layout_height="48dp"
+                                                    android:src="@drawable/ic_service"
+                                                    app:tint="@color/icon_color"/>
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="4dp"
+                                                    android:text="Produk"
+                                                    android:textSize="12sp"
+                                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Layanan -->
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/serviceCard"
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:layout_columnWeight="1"
-                            android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                                        <com.google.android.material.card.MaterialCardView
+                                            android:id="@+id/extraCard"
+                                            android:layout_width="0dp"
+                                            android:layout_height="100dp"
+                                            android:layout_columnWeight="1"
+                                            android:layout_rowWeight="1"
+                                            android:layout_margin="4dp"
+                                            app:cardCornerRadius="8dp"
+                                            app:cardElevation="2dp">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:clickable="true"
-                                android:focusable="true">
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center"
+                                                android:orientation="vertical"
+                                                android:clickable="true"
+                                                android:focusable="true">
 
-                                <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:src="@drawable/ic_service"
-                                    app:tint="@android:color/black"/>
+                                                <ImageView
+                                                    android:layout_width="48dp"
+                                                    android:layout_height="48dp"
+                                                    android:src="@drawable/ic_customers"
+                                                    app:tint="@color/icon_color"/>
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
-                                    android:text="Produk"
-                                    android:textSize="12sp"/>
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="4dp"
+                                                    android:text="Pelanggan"
+                                                    android:textSize="12sp"
+                                                    android:textColor="@color/text_primary"/>
+                                            </LinearLayout>
+                                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Tambahan -->
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/extraCard"
-                            android:layout_width="0dp"
-                            android:layout_height="100dp"
-                            android:layout_columnWeight="1"
-                            android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical"
-                                android:clickable="true"
-                                android:focusable="true">
-
-                                <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:src="@drawable/ic_add"
-                                    app:tint="@android:color/black"/>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
-                                    android:text="Tambahan"
-                                    android:textSize="12sp"/>
-                            </LinearLayout>
-                        </androidx.cardview.widget.CardView>
-
-                        <!-- Pegawai -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/staffCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -460,19 +422,19 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:src="@drawable/ic_staff"
-                                    app:tint="@android:color/black"/>
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:text="Pegawai"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Cabang -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/outletCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -494,19 +456,19 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:src="@drawable/ic_outlet"
-                                    app:tint="@android:color/black"/>
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:text="Cabang"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
-                        <!-- Printer -->
-                        <androidx.cardview.widget.CardView
+                        <com.google.android.material.card.MaterialCardView
                             android:id="@+id/printerCard"
                             android:layout_width="0dp"
                             android:layout_height="100dp"
@@ -528,16 +490,17 @@
                                     android:layout_width="48dp"
                                     android:layout_height="48dp"
                                     android:src="@drawable/ic_printer"
-                                    app:tint="@android:color/black"/>
+                                    app:tint="@color/icon_color"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="4dp"
                                     android:text="Printer"
-                                    android:textSize="12sp"/>
+                                    android:textSize="12sp"
+                                    android:textColor="@color/text_primary"/>
                             </LinearLayout>
-                        </androidx.cardview.widget.CardView>
+                        </com.google.android.material.card.MaterialCardView>
 
                     </GridLayout>
                 </LinearLayout>

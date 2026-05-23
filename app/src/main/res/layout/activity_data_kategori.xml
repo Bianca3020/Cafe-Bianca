@@ -7,15 +7,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Search Bar -->
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardSearch"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_margin="12dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
-        app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -31,7 +29,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/ic_search"
-                app:tint="#888888"/>
+                app:tint="@color/icon_color"/>
 
             <EditText
                 android:id="@+id/edtSearchKategori"
@@ -40,13 +38,12 @@
                 android:hint="@string/mencari_kategori"
                 android:background="@android:color/transparent"
                 android:textSize="14sp"
-                android:textColor="#222222"
+                android:textColor="@color/text_primary"
                 android:textColorHint="#888888"
                 android:paddingStart="8dp"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <!-- RecyclerView List Kategori -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewKategori"
         android:layout_width="0dp"
@@ -59,18 +56,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/item_data_kategori"/>
 
-    <!-- Floating Button Add (+) -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddKategori"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:src="@drawable/ic_add"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/btn_tambah_kategori"
-        app:backgroundTint="@color/card_background"
-        app:tint="@android:color/white"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@android:color/white" />
 
     <TextView
         android:id="@+id/tvNamaKategori"

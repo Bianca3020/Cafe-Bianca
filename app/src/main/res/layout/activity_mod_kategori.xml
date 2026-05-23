@@ -11,15 +11,16 @@
     <ScrollView
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/primary_cream">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="20dp"
+            android:background="@color/primary_cream">
 
-            <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -33,18 +34,18 @@
                     android:layout_height="40dp"
                     android:src="@drawable/ic_back"
                     android:layout_marginEnd="16dp"
-                    app:tint="@color/text_primary_dark"/>
+                    app:tint="@color/text_primary"/>
 
                 <TextView
+                    android:id="@+id/tvTitleHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tambah Kategori"
+                    android:textColor="@color/text_primary"
                     android:textSize="24sp"
-                    android:textColor="@color/text_primary_dark"
                     android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- Form Card Inner -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -52,13 +53,12 @@
                 android:elevation="4dp"
                 android:padding="24dp">
 
-                <!-- Nama Kategori -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Nama Kategori"
                     android:textSize="16sp"
-                    android:textColor="@color/text_primary_dark"
+                    android:textColor="@color/text_primary"
                     android:layout_marginBottom="8dp" />
 
                 <EditText
@@ -72,32 +72,43 @@
                     android:textColor="#000000"
                     android:layout_marginBottom="24dp"/>
 
-                <!-- Status -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status Kategori"
                     android:textSize="16sp"
-                    android:textColor="@color/text_primary_dark"
+                    android:textColor="@color/text_primary"
                     android:layout_marginBottom="8dp"/>
 
                 <Spinner
-                    android:id="@+id/spinnerStatus"
+                    android:id="@+id/spinnerStatusKategori"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginBottom="40dp"/>
 
-                <!-- Button -->
                 <Button
                     android:id="@+id/btnSimpan"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:background="@color/card_background"
-                    android:text="Simpan"
+                    android:backgroundTint="@color/button"
+                    android:paddingHorizontal="16dp"
+                    android:text="@string/simpan"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_on_button"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/btnHapus"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/button_hapus"
+                    android:text="@string/hapus_kategori"
                     android:textColor="@color/text_on_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:gravity="center"
+                    android:visibility="gone"
                     android:elevation="2dp" />
 
             </LinearLayout>

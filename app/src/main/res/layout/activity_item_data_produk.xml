@@ -18,7 +18,6 @@
         android:orientation="horizontal"
         android:padding="14dp">
 
-        <!-- FOTO -->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="95dp"
             android:layout_height="95dp"
@@ -33,7 +32,6 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- DETAIL -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -41,7 +39,6 @@
             android:layout_marginStart="14dp"
             android:orientation="vertical">
 
-            <!-- NAMA + STATUS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +57,6 @@
                     android:textSize="22sp"
                     android:textStyle="bold"/>
 
-                <!-- STATUS -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
@@ -83,7 +79,6 @@
 
             </LinearLayout>
 
-            <!-- HARGA -->
             <TextView
                 android:id="@+id/txtHarga"
                 android:layout_width="wrap_content"
@@ -94,7 +89,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold"/>
 
-            <!-- KATEGORI -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,14 +113,12 @@
 
             </LinearLayout>
 
-            <!-- STOK + CABANG -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal">
 
-                <!-- STOK -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -150,7 +142,6 @@
 
                 </LinearLayout>
 
-                <!-- CABANG -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

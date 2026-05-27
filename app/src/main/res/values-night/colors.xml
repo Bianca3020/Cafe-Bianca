@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Dark Mode Brown & Cream Palette -->
-    <color name="primary_brown">#C4A777</color> <!-- Light Brown -->
-    <color name="primary_brown_dark">#A1887F</color> <!-- Medium Brown -->
-    <color name="primary_cream">#2D2922</color> <!-- Dark Cream -->
-    <color name="secondary_cream">#3A342B</color> <!-- Medium Dark Cream -->
-    <color name="accent_gold">#D4B483</color> <!-- Warm Gold Accent -->
+    <color name="primary_brown">#D7BFA6</color>
+    <color name="primary_brown_dark">#B89B7A</color>
+    <color name="accent_gold">#E6C79C</color>
 
-    <!-- Background & Surface Colors -->
-    <color name="background_light">#1C1A16</color> <!-- Very Dark Cream -->
-    <color name="surface_light">#24211B</color> <!-- Dark Surface -->
-    <color name="surface_cream">#2D2922</color> <!-- Dark Cream Surface -->
-    <color name="card_background">#FAF6F0</color>
+    <color name="background">#121212</color>
+    <color name="surface">#1E1E1E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="surface_variant">#5E5D5542</color>
+    <color name="card_background">#252525</color>
+    <color name="card_transaction">#B89B7A</color>
+    <color name="button">#8B7355</color>
 
-    <!-- Text Colors -->
-    <color name="text_primary_dark">#ECEFF1</color> <!-- Light Cream -->
-    <color name="text_secondary_dark">#B0BEC5</color> <!-- Light Gray-Brown -->
-    <color name="text_on_primary">#212121</color> <!-- Dark on light -->
-    <color name="text_on_cream">#ECEFF1</color> <!-- Light cream on dark -->
-    <color name="text_icon">#8B7355</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#CCCCCC</color>
+    <color name="text_hint">#999999</color>
+    <color name="text_on_primary">#000000</color>
+    <color name="text_on_button">#FFFFFF</color>
 
-    <!-- Semantic Colors -->
-    <color name="success_green">#66BB6A</color>
-    <color name="warning_orange">#FFA726</color>
-    <color name="error_red">#EF5350</color>
-    <color name="info_blue">#42A5F5</color>
+    <color name="icon_color">#8B7355</color>
 
-    <!-- Status & Badge -->
-    <color name="badge_red">#EF5350</color>
-    <color name="divider_color">#3A342B</color>
+    <color name="status_active">#66BB6A</color>
+    <color name="status_inactive">#757575</color>
+    <color name="status_pending">#FFA726</color>
+    <color name="status_deleted">#EF5350</color>
+
+    <color name="status_active_bg">#1B5E20</color>
+    <color name="status_inactive_bg">#424242</color>
+    <color name="status_pending_bg">#E65100</color>
+    <color name="status_deleted_bg">#B71C1C</color>
+
+    <color name="button_hapus">#EF5350</color>
+    <color name="button_logout">#EF5350</color>
+
 </resources>

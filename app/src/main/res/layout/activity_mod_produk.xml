@@ -2,51 +2,52 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
-    app:cardBackgroundColor="?attr/colorSurface">
+    android:backgroundTint="@color/surface_variant"
+    android:fitsSystemWindows="true">
 
     <ScrollView
-        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/surface_variant">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="20dp"
+            android:backgroundTint="@color/surface_variant">
 
-            <!-- HEADER -->
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:layout_marginEnd="16dp"
+                app:tint="@color/icon_color"/>
+
+            <TextView
+                android:id="@+id/tvTitleHeader"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="24dp">
-
-                <ImageView
-                    android:id="@+id/btnBack"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_back"
-                    android:layout_marginEnd="16dp"
-                    app:tint="?attr/colorOnSurface"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Tambah Produk"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    android:textColor="?attr/colorOnSurface"/>
+                android:text="@string/tambah_produk"
+                android:textSize="24sp"
+                android:textColor="@color/text_secondary"
+                android:textStyle="bold" />
             </LinearLayout>
 
-            <!-- FOTO -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
@@ -55,33 +56,36 @@
                 app:cardElevation="2dp"
                 app:cardBackgroundColor="?attr/colorSurfaceVariant">
 
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/imgProduk"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_camera"
-                        app:tint="?attr/colorOnSurface"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Tambah Foto"
-                        android:textColor="?attr/colorOnSurface" />
-                </LinearLayout>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_camera"
+                    app:tint="?attr/colorOnSurface"/>
             </androidx.cardview.widget.CardView>
 
-            <!-- NAMA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Nama Produk"
+                android:text="@string/link_foto"
+                android:textColor="?attr/colorOnSurface"
+                android:layout_marginBottom="6dp"/>
+
+            <EditText
+                android:id="@+id/etLinkFoto"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hint_link_url"
+                android:paddingHorizontal="16dp"
+                android:textColor="?attr/colorOnSurface"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_nama_produk_form"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="6dp"/>
 
@@ -89,18 +93,16 @@
                 android:id="@+id/etNama"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Masukkan nama produk"
+                android:hint="@string/hint_nama_produk_form"
                 android:paddingHorizontal="16dp"
                 android:textColor="?attr/colorOnSurface"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- HARGA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Harga"
+                android:text="@string/label_harga_produk_form"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="6dp"/>
 
@@ -108,19 +110,17 @@
                 android:id="@+id/etHarga"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Masukkan harga"
+                android:hint="@string/hint_harga_produk_form"
                 android:inputType="number"
                 android:paddingHorizontal="16dp"
                 android:textColor="?attr/colorOnSurface"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- KATEGORI -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Kategori"
+                android:text="@string/kategori"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="6dp"/>
 
@@ -130,12 +130,10 @@
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- CABANG -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Cabang"
+                android:text="@string/label_cabang"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="6dp"/>
 
@@ -145,12 +143,10 @@
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- STOK -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Stok"
+                android:text="@string/label_stok_produk"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="6dp"/>
 
@@ -158,20 +154,18 @@
                 android:id="@+id/etStok"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:hint="Jumlah stok"
+                android:hint="@string/hint_stok_produk"
                 android:inputType="number"
                 android:paddingHorizontal="16dp"
                 android:textColor="?attr/colorOnSurface"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- CHECKBOX -->
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:id="@+id/cbUnlimited"
-                android:text="Stok Tak Terbatas"
+                android:text="@string/label_tanpa_batas"
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="20dp"/>
 
@@ -180,11 +174,26 @@
                 android:id="@+id/btnSimpan"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:text="Simpan"
-                android:textStyle="bold"
-                android:textColor="?attr/colorOnPrimary"
-                android:background="?attr/colorPrimary"/>
+                android:text="@string/simpan"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/button"
+                android:paddingHorizontal="16dp"
+                android:textColor="@color/text_on_button"/>
 
+                <Button
+                    android:id="@+id/btnHapus"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="@color/button_hapus"
+                    android:text="@string/hapus_produk"
+                    android:textColor="@color/text_on_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:elevation="2dp" />
         </LinearLayout>
     </ScrollView>
 

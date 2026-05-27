@@ -2,16 +2,16 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:cardCornerRadius="16dp"
     app:cardElevation="8dp"
     android:layout_margin="16dp"
-    android:backgroundTint="@color/surface_variant"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:backgroundTint="@color/surface_variant">
 
     <ScrollView
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/surface_variant">
@@ -20,9 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            android:backgroundTint="@color/surface_variant">
+            android:padding="20dp">
 
+            <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,81 +42,105 @@
                     android:id="@+id/tvTitleHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tambah_kategori"
-                    android:textColor="@color/text_secondary"
+                    android:text="@string/tambah_pelanggan"
                     android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/text_secondary"
+                    android:textStyle="bold"/>
             </LinearLayout>
 
+            <!-- Form -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:elevation="4dp"
                 android:padding="24dp">
 
+                <!-- Nama -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_nama_kategori_form"
+                    android:text="@string/label_nama_pelanggan_form"
                     android:textSize="16sp"
                     android:textColor="@color/text_primary"
-                    android:layout_marginBottom="8dp" />
-
+                    android:layout_marginBottom="8dp"/>
                 <EditText
-                    android:id="@+id/etNamaKategori"
+                    android:id="@+id/etNama"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:hint="@string/hint_nama_kategori"
+                    android:paddingHorizontal="16dp"
+                    android:hint="@string/hint_nama_pelanggan_form"
                     android:background="@drawable/bg_input"
                     android:textSize="16sp"
                     android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="24dp"/>
 
+                <!-- Nomor Telp -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_status_kategori"
+                    android:text="@string/label_telepon_pelanggan"
                     android:textSize="16sp"
                     android:textColor="@color/text_primary"
                     android:layout_marginBottom="8dp"/>
-
-                <Spinner
-                    android:id="@+id/spinnerStatusKategori"
+                <EditText
+                    android:id="@+id/etTelp"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:layout_marginBottom="40dp"/>
+                    android:paddingHorizontal="16dp"
+                    android:hint="@string/hint_telepon_pelanggan"
+                    android:background="@drawable/bg_input"
+                    android:inputType="phone"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginBottom="24dp"/>
 
+                <!-- Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_email_form"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp"/>
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingHorizontal="16dp"
+                    android:hint="@string/hint_email_pelanggan"
+                    android:background="@drawable/bg_input"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Button Simpan -->
                 <Button
                     android:id="@+id/btnSimpan"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:backgroundTint="@color/button"
-                    android:paddingHorizontal="16dp"
                     android:text="@string/simpan"
+                    android:textSize="16sp"
                     android:textAllCaps="false"
-                    android:textColor="@color/text_on_button"
-                    android:textSize="16sp" />
+                    android:backgroundTint="@color/button"
+                    android:textColor="@color/text_on_button"/>
 
+                <!-- Button Hapus -->
                 <Button
                     android:id="@+id/btnHapus"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginTop="12dp"
                     android:backgroundTint="@color/button_hapus"
-                    android:text="@string/hapus_kategori"
-                    android:textColor="@color/text_on_primary"
+                    android:text="@string/hapus_pelanggan"
+                    android:textColor="@color/text_on_button"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:visibility="gone"
-                    android:elevation="2dp" />
+                    android:elevation="2dp"/>
 
             </LinearLayout>
-
         </LinearLayout>
     </ScrollView>
-
 </androidx.cardview.widget.CardView>

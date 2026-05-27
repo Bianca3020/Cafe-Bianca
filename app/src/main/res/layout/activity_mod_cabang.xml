@@ -20,8 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            android:backgroundTint="@color/surface_variant">
+            android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -42,9 +41,9 @@
                     android:id="@+id/tvTitleHeader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/tambah_kategori"
-                    android:textColor="@color/text_secondary"
+                    android:text="@string/tambah_cabang"
                     android:textSize="24sp"
+                    android:textColor="@color/text_secondary"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -55,21 +54,22 @@
                 android:elevation="4dp"
                 android:padding="24dp">
 
+                <!-- Nama Cabang -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_nama_kategori_form"
+                    android:text="@string/label_nama_cabang"
                     android:textSize="16sp"
                     android:textColor="@color/text_primary"
                     android:layout_marginBottom="8dp" />
 
                 <EditText
-                    android:id="@+id/etNamaKategori"
+                    android:id="@+id/etNamaCabang"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:hint="@string/hint_nama_kategori"
+                    android:hint="@string/hint_nama_cabang"
                     android:background="@drawable/bg_input"
                     android:textSize="16sp"
                     android:textColor="?attr/colorOnSurface"
@@ -78,13 +78,33 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/label_status_kategori"
+                    android:text="@string/label_alamat_cabang"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etAlamatCabang"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="@string/hint_alamat_cabang"
+                    android:background="@drawable/bg_input"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_status_cabang"
                     android:textSize="16sp"
                     android:textColor="@color/text_primary"
                     android:layout_marginBottom="8dp"/>
 
                 <Spinner
-                    android:id="@+id/spinnerStatusKategori"
+                    android:id="@+id/spinnerStatus"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginBottom="40dp"/>
@@ -93,12 +113,12 @@
                     android:id="@+id/btnSimpan"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
+                    android:text="@string/simpan"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
                     android:backgroundTint="@color/button"
                     android:paddingHorizontal="16dp"
-                    android:text="@string/simpan"
-                    android:textAllCaps="false"
-                    android:textColor="@color/text_on_button"
-                    android:textSize="16sp" />
+                    android:textColor="@color/text_on_button"/>
 
                 <Button
                     android:id="@+id/btnHapus"
@@ -106,7 +126,7 @@
                     android:layout_height="48dp"
                     android:layout_marginTop="12dp"
                     android:backgroundTint="@color/button_hapus"
-                    android:text="@string/hapus_kategori"
+                    android:text="@string/hapus_cabang"
                     android:textColor="@color/text_on_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"

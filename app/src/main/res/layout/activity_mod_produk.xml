@@ -1,196 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/surface_variant"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:backgroundTint="@color/surface_variant">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp"
-            android:backgroundTint="@color/surface_variant">
+            android:padding="24dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="40dp"
-            android:gravity="center_vertical">
-
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_back"
-                android:layout_marginEnd="16dp"
-                app:tint="@color/icon_color"/>
-
-            <TextView
-                android:id="@+id/tvTitleHeader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tambah_produk"
-                android:textSize="24sp"
-                android:textColor="@color/text_secondary"
-                android:textStyle="bold" />
-            </LinearLayout>
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="?attr/colorSurfaceVariant">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp"
+                android:gravity="center_vertical">
 
                 <ImageView
-                    android:id="@+id/imgProduk"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_camera"
-                    app:tint="?attr/colorOnSurface"/>
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/link_foto"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <EditText
-                android:id="@+id/etLinkFoto"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_link_url"
-                android:paddingHorizontal="16dp"
-                android:textColor="?attr/colorOnSurface"
-                android:background="@drawable/bg_input"
-                android:layout_marginBottom="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_nama_produk_form"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <EditText
-                android:id="@+id/etNama"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_nama_produk_form"
-                android:paddingHorizontal="16dp"
-                android:textColor="?attr/colorOnSurface"
-                android:background="@drawable/bg_input"
-                android:layout_marginBottom="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_harga_produk_form"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <EditText
-                android:id="@+id/etHarga"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_harga_produk_form"
-                android:inputType="number"
-                android:paddingHorizontal="16dp"
-                android:textColor="?attr/colorOnSurface"
-                android:background="@drawable/bg_input"
-                android:layout_marginBottom="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <Spinner
-                android:id="@+id/spKategori"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_cabang"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <Spinner
-                android:id="@+id/spCabang"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginBottom="16dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_stok_produk"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="6dp"/>
-
-            <EditText
-                android:id="@+id/etStok"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_stok_produk"
-                android:inputType="number"
-                android:paddingHorizontal="16dp"
-                android:textColor="?attr/colorOnSurface"
-                android:background="@drawable/bg_input"
-                android:layout_marginBottom="8dp"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/cbUnlimited"
-                android:text="@string/label_tanpa_batas"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="20dp"/>
-
-            <Button
-                android:id="@+id/btnSimpan"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:text="@string/simpan"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/button"
-                android:paddingHorizontal="16dp"
-                android:textColor="@color/text_on_button"/>
-
-                <Button
-                    android:id="@+id/btnHapus"
-                    android:layout_width="match_parent"
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/button_hapus"
-                    android:text="@string/hapus_produk"
-                    android:textColor="@color/text_on_primary"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:visibility="gone"
-                    android:elevation="2dp" />
+                    android:src="@drawable/ic_back"
+                    android:layout_marginEnd="16dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="5dp"
+                    app:tint="@color/icon_color"/>
+
+                <TextView
+                    android:id="@+id/tvTitleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tambah_produk"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginBottom="24dp"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="?attr/colorSurfaceVariant">
+
+                        <ImageView
+                            android:id="@+id/imgProduk"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_camera"
+                            app:tint="?attr/colorOnSurfaceVariant"
+                            android:padding="48dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="@string/hint_link_url"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etLinkFoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textUri"
+                            android:textColor="?attr/colorOnSurface" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="@string/hint_nama_produk_form"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textColor="?attr/colorOnSurface" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="@string/hint_harga_produk_form"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etHarga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="?attr/colorOnSurface" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kategori"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
+                        <Spinner
+                            android:id="@+id/spKategori"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:paddingHorizontal="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_cabang"
+                        android:textColor="?attr/colorOnSurfaceVariant"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="?attr/colorOutlineVariant"
+                        app:cardBackgroundColor="?attr/colorSurface">
+                        <Spinner
+                            android:id="@+id/spCabang"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:paddingHorizontal="12dp"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:hint="@string/hint_stok_produk"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etStok"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="?attr/colorOnSurface" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbUnlimited"
+                        android:text="@string/label_tanpa_batas"
+                        android:textColor="?attr/colorOnSurface"
+                        android:layout_marginBottom="32dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSimpan"
+                        style="@style/Widget.Material3.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="@string/simpan"
+                        android:textColor="@color/text_on_button"
+                        android:textSize="16sp"
+                        app:cornerRadius="12dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnHapus"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/hapus_produk"
+                        android:textColor="?attr/colorError"
+                        android:textSize="16sp"
+                        app:strokeColor="?attr/colorError"
+                        app:cornerRadius="12dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,6 @@
-package com.biancaputri.pos
+package com.biancaputri.pos.activity
 
-import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -17,7 +15,7 @@ import androidx.core.os.LocaleListCompat
 import com.biancaputri.pos.kategori.DataKategoriActivity
 import com.biancaputri.pos.model.ModelPelanggan
 import com.biancaputri.pos.model.ModelTransaksi
-import com.biancaputri.pos.viewmodel.DataProdukActivity
+import com.biancaputri.pos.R
 import com.google.android.material.card.MaterialCardView
 import com.google.firebase.database.*
 import java.text.SimpleDateFormat
@@ -52,7 +50,8 @@ class MainActivity : AppCompatActivity() {
             finish()
             return
         }
-        val userNameText = prefs.getString("nama", getString(R.string.pengguna_default)) ?: getString(R.string.pengguna_default)
+        val userNameText = prefs.getString("nama", getString(R.string.pengguna_default)) ?: getString(
+            R.string.pengguna_default)
 
         val calendar = Calendar.getInstance()
         val hour = calendar.get(Calendar.HOUR_OF_DAY)
@@ -93,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         setupCardClickListener(R.id.customerCard, DataKategoriActivity::class.java)
         setupCardClickListener(R.id.reportCard, LaporanActivity::class.java)
         setupCardClickListener(R.id.accountCard, AkunActivity::class.java)
-        setupCardClickListener(R.id.serviceCard, DataProdukActivity::class.java)
+        setupCardClickListener(R.id.serviceCard, ProdukActivity::class.java)
         setupCardClickListener(R.id.extraCard, PelangganActivity::class.java)
         setupCardClickListener(R.id.staffCard, PegawaiActivity::class.java)
         setupCardClickListener(R.id.outletCard, CabangActivity::class.java)

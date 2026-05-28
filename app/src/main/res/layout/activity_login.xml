@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
     <ScrollView
@@ -19,16 +20,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="32dp"
+            android:padding="24dp"
             android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nama_toko"
-                android:textSize="32sp"
+                android:textSize="36sp"
                 android:textStyle="bold"
-                android:textColor="@color/primary_brown"
+                android:textColor="?attr/colorPrimary"
+                android:layout_marginTop="32dp"
                 android:layout_marginBottom="8dp"/>
 
             <TextView
@@ -36,66 +38,73 @@
                 android:layout_height="wrap_content"
                 android:text="@string/label_pos"
                 android:textSize="16sp"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:layout_marginBottom="48dp"/>
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/label_email"
-                android:textSize="14sp"
-                android:textColor="@color/text_primary"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="16dp"
+                android:hint="@string/label_email"
+                app:placeholderText="@string/hint_email"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
 
-            <EditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_email"
-                android:inputType="textEmailAddress"
-                android:paddingHorizontal="16dp"
-                android:background="@drawable/bg_input"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="20dp"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="?attr/colorOnSurface" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/label_password"
-                android:textSize="14sp"
-                android:textColor="@color/text_primary"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="32dp"
+                android:hint="@string/label_password"
+                app:placeholderText="@string/hint_password"
+                app:passwordToggleEnabled="true"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
 
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:paddingHorizontal="16dp"
-                android:background="@drawable/bg_input"
-                android:textColor="?attr/colorOnSurface"
-                android:layout_marginBottom="32dp"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="?attr/colorOnSurface" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnLogin"
+                style="@style/Widget.Material3.Button"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="56dp"
                 android:text="@string/masuk"
                 android:textSize="16sp"
-                android:textAllCaps="false"
-                android:backgroundTint="@color/primary_brown"
-                android:textColor="@color/text_on_primary"
-                android:layout_marginBottom="16dp"/>
+                app:cornerRadius="12dp"
+                android:textColor="@color/text_on_button"
+                android:layout_marginBottom="24dp"/>
 
             <TextView
                 android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="@string/label_belum_punya_akun"
                 android:textSize="14sp"
-                android:textColor="@color/primary_brown"
-                android:textStyle="bold"/>
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"/>
 
         </LinearLayout>
     </ScrollView>

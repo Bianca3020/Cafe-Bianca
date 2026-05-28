@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
     <androidx.core.widget.NestedScrollView
@@ -102,7 +103,7 @@
                 android:layout_height="55dp"
                 android:text="@string/simpan"
                 android:textColor="@android:color/white"
-                android:backgroundTint="@color/primary_brown"
+                android:backgroundTint="@color/button"
                 android:textStyle="bold"
                 android:textAllCaps="false"
                 app:cornerRadius="12dp"/>

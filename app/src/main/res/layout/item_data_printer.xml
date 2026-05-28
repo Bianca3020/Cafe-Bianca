@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="2dp">
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface_variant">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,14 +38,16 @@
                 android:textColor="@color/text_secondary"/>
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnConnect"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:text="@string/sambung"
             android:textSize="12sp"
-            android:textColor="@color/text_on_button"
-            android:backgroundTint="@color/button"/>
+            app:backgroundTint="@color/button"
+            android:insetLeft="16dp"
+            android:insetRight="16dp"
+            android:textColor="@color/text_on_button" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

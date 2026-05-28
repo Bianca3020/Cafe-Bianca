@@ -11,7 +11,7 @@
     app:cardCornerRadius="18dp"
     app:cardElevation="3dp"
     app:strokeWidth="1dp"
-    app:cardBackgroundColor="@color/surface_variant">
+    app:cardBackgroundColor="?attr/colorSurface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:layout_weight="1"
                     android:ellipsize="end"
                     android:maxLines="1"
-                    android:text="Kopi Tarik"
+                    android:text="@string/sample_nama_produk"
                     android:textColor="@color/text_primary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -103,7 +103,7 @@
                         android:id="@+id/btnAtur"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/button"
+                        app:backgroundTint="@color/button"
                         android:minWidth="0dp"
                         android:text="@string/tambah"
                         android:textAllCaps="false"
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Rp7.000"
+                android:text="@string/sample_harga_produk"
                 android:textColor="@color/text_primary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -142,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
-                    android:text="Minuman"
+                    android:text="@string/sample_kategori_produk"
                     android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
@@ -171,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
-                        android:text="Tidak Terbatas"
+                        android:text="@string/sample_stok_produk"
                         android:textColor="#2E7D32"
                         android:textSize="15sp" />
 
@@ -195,7 +195,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="6dp"
-                        android:text="Utama"
+                        android:text="@string/sample_cabang_produk"
                         android:textColor="@color/text_primary"
                         android:textSize="15sp" />
 

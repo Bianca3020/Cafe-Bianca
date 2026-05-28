@@ -6,6 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
     android:fitsSystemWindows="true">
 
     <ScrollView
@@ -20,12 +21,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="24dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="24dp">
 
                 <LinearLayout
                     android:id="@+id/containerTextHeader"
@@ -33,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_toStartOf="@id/containerActionHeader"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="16dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -41,9 +42,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/sapa_pagi"
-                        android:textSize="22sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_primary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:maxLines="2"
                         android:ellipsize="end"/>
 
@@ -52,7 +53,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:text="Senin, 20 Januari 2026"
-                        android:textColor="@color/text_primary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="14sp"
                         android:layout_marginTop="4dp"/>
                 </LinearLayout>
@@ -70,44 +71,43 @@
                         android:id="@+id/btnSettingAplikasi"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:layout_marginStart="4dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
                         android:focusable="true"
                         android:padding="8dp"
                         android:src="@drawable/ic_setting"
                         android:contentDescription="@string/btn_pengaturan"
-                        app:tint="@color/icon_color"/>
+                        app:tint="?attr/colorOnSurfaceVariant"/>
                 </LinearLayout>
 
             </RelativeLayout>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/surface_variant">
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_hari_ini"
-                        android:textColor="@color/text_primary"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="16dp"
                         android:orientation="horizontal"
                         android:weightSum="3">
 
@@ -122,7 +122,7 @@
                                 android:id="@+id/transactionCountText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
                                 tools:text="12" />
@@ -131,7 +131,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/label_transaksi"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -146,7 +146,7 @@
                                 android:id="@+id/incomeText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="20sp"
                                 android:textStyle="bold"
                                 tools:text="Rp 1.250.000" />
@@ -155,7 +155,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/label_pendapatan"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -170,7 +170,7 @@
                                 android:id="@+id/customerCountText"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorPrimary"
                                 android:textSize="24sp"
                                 android:textStyle="bold"
                                 tools:text="45" />
@@ -179,7 +179,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/label_pelanggan_dash"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="12sp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -187,7 +187,7 @@
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="20dp"
                         android:columnCount="3"
                         android:rowCount="2">
 
@@ -197,9 +197,12 @@
                             android:layout_height="100dp"
                             android:layout_rowWeight="1"
                             android:layout_columnWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -213,18 +216,19 @@
 
                                 <ImageView
                                     android:id="@+id/transaksiIcon"
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_transaction"
-                                    app:tint="@color/icon_color" />
+                                    app:tint="?attr/colorPrimary" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_transaksi"
-                                    android:textColor="@color/text_primary"
-                                    android:textSize="12sp" />
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -234,9 +238,12 @@
                             android:layout_height="100dp"
                             android:layout_rowWeight="1"
                             android:layout_columnWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -249,18 +256,19 @@
                                 android:padding="8dp">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_tag"
-                                    app:tint="@color/icon_color" />
+                                    app:tint="?attr/colorPrimary" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_kategori_dash"
-                                    android:textColor="@color/text_primary"
-                                    android:textSize="12sp" />
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -270,9 +278,12 @@
                             android:layout_height="100dp"
                             android:layout_rowWeight="1"
                             android:layout_columnWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -285,38 +296,39 @@
                                 android:padding="8dp">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_reports"
-                                    app:tint="@color/icon_color" />
+                                    app:tint="?attr/colorPrimary" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_laporan"
-                                    android:textColor="@color/text_primary"
-                                    android:textSize="12sp" />
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
                     </GridLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
-            <androidx.cardview.widget.CardView
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="4dp"
-                app:cardBackgroundColor="@color/surface_variant">
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="?attr/colorSurface">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -324,12 +336,12 @@
                         android:text="@string/label_menu_tambahan"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@color/text_primary"/>
+                        android:textColor="?attr/colorOnSurface"/>
 
                     <GridLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
+                        android:layout_marginTop="16dp"
                         android:columnCount="3"
                         android:rowCount="2">
 
@@ -339,31 +351,36 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_account"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_akun"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -373,31 +390,36 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_service"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_produk"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -407,31 +429,36 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_customers"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_pelanggan_dash"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -441,31 +468,36 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_staff"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_pegawai"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -475,31 +507,36 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_outlet"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_cabang"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
@@ -509,37 +546,42 @@
                             android:layout_height="100dp"
                             android:layout_columnWeight="1"
                             android:layout_rowWeight="1"
-                            android:layout_margin="4dp"
-                            app:cardCornerRadius="8dp"
-                            app:cardElevation="2dp">
+                            android:layout_margin="6dp"
+                            app:cardCornerRadius="16dp"
+                            app:cardElevation="0dp"
+                            app:strokeWidth="1dp"
+                            app:strokeColor="?attr/colorOutlineVariant"
+                            app:cardBackgroundColor="?attr/colorSurface">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical"
+                                android:background="?attr/selectableItemBackground"
                                 android:clickable="true"
                                 android:focusable="true">
 
                                 <ImageView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="32dp"
                                     android:src="@drawable/ic_printer"
-                                    app:tint="@color/icon_color"/>
+                                    app:tint="?attr/colorPrimary"/>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
+                                    android:layout_marginTop="8dp"
                                     android:text="@string/label_printer"
                                     android:textSize="12sp"
-                                    android:textColor="@color/text_primary"/>
+                                    android:textColor="?attr/colorOnSurface"
+                                    android:textStyle="bold"/>
                             </LinearLayout>
                         </com.google.android.material.card.MaterialCardView>
 
                     </GridLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
     </ScrollView>

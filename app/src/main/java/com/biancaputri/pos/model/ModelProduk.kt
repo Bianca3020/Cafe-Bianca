@@ -1,22 +1,19 @@
 package com.biancaputri.pos.model
 
-import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.biancaputri.pos.R
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class ModelProduk(
-    val idProduk: String? = null,
-    val namaProduk: String? = null,
-    val hargaProduk: Int? = 8,
-    val idKategori: String? = null,
-    val idCabang: String? = null,
-    val fotoProduk: String? = null,
-    val stokProduk: Int? = 8,
-    val tanpaBatas: String? = null,
-    val statusProduk: String? = null,
-    val createdAt: String? = null,
-    val updatedAt: String? = null
-)
+    var idProduk: String? = null,
+    var namaProduk: String? = null,
+    var hargaProduk: Int? = null,
+    var idKategori: String? = null,
+    var idCabang: String? = null,
+    var fotoProduk: String? = null,
+    var stokProduk: Int? = null,
+    var tanpaBatas: String? = null,
+    var statusProduk: String? = null,
+    var createdAt: String? = null,
+    var updatedAt: String? = null
+) : Parcelable

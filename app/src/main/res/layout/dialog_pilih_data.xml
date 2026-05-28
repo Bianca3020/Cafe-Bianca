@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="24dp"
-    android:backgroundTint="@color/surface">
+    android:backgroundTint="?attr/colorSurface">
 
     <TextView
         android:id="@+id/tvDialogTitle"
@@ -24,7 +24,7 @@
         android:maxHeight="400dp"
         android:layout_marginBottom="16dp"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnTutupDialog"
         android:layout_width="match_parent"
         android:layout_height="48dp"

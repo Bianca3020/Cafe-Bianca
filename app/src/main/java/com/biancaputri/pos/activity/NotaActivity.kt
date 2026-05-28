@@ -104,7 +104,7 @@ class NotaActivity : AppCompatActivity() {
             val tvNama = TextView(this).apply {
                 text = item.namaProduk ?: "-"
                 textSize = 12f
-                setTextColor(getColor(R.color.text_primary_dark))
+                setTextColor(getColor(R.color.text_primary))
                 layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 3f)
             }
 
@@ -121,7 +121,7 @@ class NotaActivity : AppCompatActivity() {
             val tvSubtotal = TextView(this).apply {
                 text = getString(R.string.format_rupiah, subtotalFormatted)
                 textSize = 12f
-                setTextColor(getColor(R.color.text_primary_dark))
+                setTextColor(getColor(R.color.text_primary))
                 gravity = Gravity.END
                 layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 2f)
             }

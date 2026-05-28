@@ -357,4 +357,11 @@
         <item>Mode Terang</item>
         <item>Mode Malam</item>
     </string-array>
+    <string name="sample_nama_produk">Kopi Tarik</string>
+    <string name="sample_harga_produk">Rp7.000</string>
+    <string name="sample_kategori_produk">Minuman</string>
+    <string name="sample_stok_produk">Tidak Terbatas</string>
+    <string name="sample_cabang_produk">Utama</string>
+    <string name="cabang_utama">Cabang Utama</string>
+    <string name="alamat_cabang">Jl. Soekarno Hatta No. 1</string>
 </resources>

@@ -6,31 +6,18 @@
     <color name="accent_gold">#D4B483</color>
     <color name="primary_cream">#FAF6F0</color>
     <color name="background">#FAF6F0</color>
-    <color name="surface">#FFFFFF</color>
-    <color name="white">#FFFFFF</color>
     <color name="surface_variant">#F5F5F5</color>
     <color name="card_background">#6B5538</color>
     <color name="card_transaction">#B89B7A</color>
     <color name="button">#8B7355</color>
 
     <color name="text_primary">#5D4037</color>
-    <color name="text_primary_dark">#2C2B2A</color>
     <color name="text_secondary">#2C2B2A</color>
     <color name="text_hint">#A1887F</color>
     <color name="text_on_primary">#FFFFFF</color>
     <color name="text_on_button">#FFFFFF</color>
 
     <color name="icon_color">#5D4037</color>
-
-    <color name="status_active">#4CAF50</color>
-    <color name="status_inactive">#9E9E9E</color>
-    <color name="status_pending">#FF9800</color>
-    <color name="status_deleted">#EF5350</color>
-
-    <color name="status_active_bg">#E8F5E9</color>
-    <color name="status_inactive_bg">#F5F5F5</color>
-    <color name="status_pending_bg">#FFF3E0</color>
-    <color name="status_deleted_bg">#FFEBEE</color>
 
     <color name="button_hapus">#EF5350</color>
     <color name="button_logout">#EF5350</color>

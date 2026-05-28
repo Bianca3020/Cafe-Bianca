@@ -1,33 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.biancaputri.pos">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Kasir">
+        android:theme="@style/Theme.Kasir" >
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.biancaputri.pos.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.NotaActivity" android:exported="false" />
+        <activity android:name=".activity.RegisterActivity" android:exported="false" />
+        <activity android:name=".activity.LoginActivity" android:exported="false" />
+        <activity android:name=".mod.ModPelangganActivity" android:exported="false" />
+        <activity android:name=".activity.PelangganActivity" android:exported="false" />
+
         <activity
-            android:name=".item_data_produk"
-            android:exported="false" />
-        <activity
-            android:name=".viewmodel.DataProdukViewModel"
-            android:exported="false" />
-        <activity
-            android:name=".model.ModelProduk"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".activity.MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".kategori.DataKategoriActivity" />
-        <activity android:name=".kategori.ModKategoriActivity" />
+
+        <activity android:name=".kategori.DataKategoriActivity" android:exported="false" />
+        <activity android:name=".kategori.ModKategoriActivity" android:exported="false" />
+        <activity android:name=".activity.ProdukActivity" android:exported="false" />
+        <activity android:name=".mod.ModProdukActivity" android:exported="false" />
+        <activity android:name=".activity.TransaksiActivity" android:exported="false" />
+        <activity android:name=".activity.LaporanActivity" android:exported="false" />
+        <activity android:name=".activity.AkunActivity" android:exported="false" />
+        <activity android:name=".mod.ModAkunActivity" android:exported="false" />
+        <activity android:name=".activity.PegawaiActivity" android:exported="false" />
+        <activity android:name=".mod.ModPegawaiActivity" android:exported="false" />
+        <activity android:name=".activity.CabangActivity" android:exported="false" />
+        <activity android:name=".mod.ModCabangActivity" android:exported="false" />
+        <activity android:name=".activity.PrinterActivity" android:exported="false" />
+
     </application>
 
 </manifest>

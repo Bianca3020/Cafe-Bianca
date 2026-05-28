@@ -5,24 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="8dp"
-    android:layout_margin="16dp"
     android:fitsSystemWindows="true"
     android:backgroundTint="@color/surface_variant">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/surface_variant">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,14 +43,12 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <!-- Form -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="24dp">
 
-                <!-- Nama -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,7 +67,6 @@
                     android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="24dp"/>
 
-                <!-- Nomor Telp -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -94,7 +86,6 @@
                     android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="24dp"/>
 
-                <!-- Email -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,7 +105,6 @@
                     android:textColor="?attr/colorOnSurface"
                     android:layout_marginBottom="24dp"/>
 
-                <!-- Button Simpan -->
                 <Button
                     android:id="@+id/btnSimpan"
                     android:layout_width="match_parent"
@@ -125,7 +115,6 @@
                     android:backgroundTint="@color/button"
                     android:textColor="@color/text_on_button"/>
 
-                <!-- Button Hapus -->
                 <Button
                     android:id="@+id/btnHapus"
                     android:layout_width="match_parent"
@@ -142,5 +131,5 @@
 
             </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.cardview.widget.CardView>

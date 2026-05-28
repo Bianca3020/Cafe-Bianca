@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardSearch"
@@ -32,10 +33,10 @@
                 app:tint="@color/icon_color"/>
 
             <EditText
-                android:id="@+id/edtSearchProduk"
+                android:id="@+id/edtSearchPelanggan"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/mencari_produk"
+                android:hint="@string/mencari_pelanggan"
                 android:background="@android:color/transparent"
                 android:textSize="14sp"
                 android:textColor="@color/text_primary"
@@ -45,7 +46,7 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewProduk"
+        android:id="@+id/recyclerViewPelanggan"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingBottom="88dp"
@@ -54,27 +55,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/activity_item_data_produk"/>
+        tools:listitem="@layout/item_data_pelanggan"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddProduk"
+        android:id="@+id/fabAddPelanggan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:contentDescription="@string/btn_tambah_produk"
         android:src="@drawable/ic_add"
+        android:contentDescription="@string/btn_tambah_pelanggan"
         app:backgroundTint="@color/button"
+        app:tint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@android:color/white" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/tvNamaKategori"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

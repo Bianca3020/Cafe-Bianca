@@ -5,13 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="8dp"
     android:backgroundTint="@color/surface_variant"
     android:fitsSystemWindows="true">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/surface_variant">
@@ -169,7 +166,6 @@
                 android:textColor="?attr/colorOnSurface"
                 android:layout_marginBottom="20dp"/>
 
-            <!-- BUTTON -->
             <Button
                 android:id="@+id/btnSimpan"
                 android:layout_width="match_parent"
@@ -195,6 +191,6 @@
                     android:visibility="gone"
                     android:elevation="2dp" />
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.cardview.widget.CardView>

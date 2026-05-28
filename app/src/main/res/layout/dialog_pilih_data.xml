@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:backgroundTint="@color/surface">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pilih_data"
+        android:textSize="20sp"
+        android:textColor="@color/text_primary"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDialogItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="400dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnTutupDialog"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="@string/batal"
+        android:textColor="@color/text_on_button"
+        android:backgroundTint="@color/button"
+        android:textStyle="bold"
+        app:strokeWidth="1dp" />
+</LinearLayout>

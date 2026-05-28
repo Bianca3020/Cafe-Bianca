@@ -1,2 +1,362 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Cafe Bianca</string>
+
+    <!-- Navigation & Buttons -->
+    <string name="btn_tambah_kategori">Add Category</string>
+    <string name="btn_tambah_produk">Add Product</string>
+    <string name="btn_tambah_cabang">Add Branch</string>
+    <string name="btn_tambah_pegawai">Add Employee</string>
+    <string name="btn_tambah_pelanggan">Add Customer</string>
+    <string name="btn_pengaturan">Settings</string>
+    <string name="btn_pendapatan">Revenue</string>
+    <string name="mengatur">Manage</string>
+    <string name="simpan">Save</string>
+    <string name="batal">Cancel</string>
+    <string name="bayar">Pay</string>
+    <string name="selesai">Done</string>
+    <string name="tambah">Add</string>
+    <string name="logout">Logout</string>
+    <string name="ya">Yes</string>
+    <string name="tidak">No</string>
+
+    <!-- Search & Filters -->
+    <string name="mencari_kategori">Search Category</string>
+    <string name="mencari_cabang">Search Branch</string>
+    <string name="mencari_pegawai">Search Employee</string>
+    <string name="mencari_pelanggan">Search Customer</string>
+    <string name="mencari_produk">Search Product</string>
+    <string name="semua_kategori">All Categories</string>
+    <string name="semua_cabang">All Branches</string>
+
+    <!-- Greetings -->
+    <string name="sapa_pagi">Good Morning, %1$s</string>
+    <string name="sapa_siang">Good Afternoon, %1$s</string>
+    <string name="sapa_sore">Good Evening, %1$s</string>
+    <string name="sapa_malam">Good Night, %1$s</string>
+    <string name="pengguna_default">User</string>
+
+    <!-- Labels & Titles -->
+    <string name="kategori">Category</string>
+    <string name="umum">General</string>
+    <string name="utama">Main</string>
+    <string name="admin_default">Admin</string>
+    <string name="pusat_default">Central</string>
+    <string name="status_aktif_val">Active</string>
+    <string name="status_non_aktif">Inactive</string>
+    <string name="tidak_terbatas">Unlimited</string>
+    <string name="dash">-</string>
+
+    <!-- Form Labels - Product -->
+    <string name ="link_foto">Photo Link</string>
+    <string name="hint_link_url">Enter photo URL (example: https://...)</string>
+    <string name="edit_produk">Edit Product</string>
+    <string name="tambah_produk">Add Product</string>
+    <string name="label_nama_produk_form">Product Name</string>
+    <string name="hint_nama_produk_form">Enter product name</string>
+    <string name="label_harga_produk_form">Product Price</string>
+    <string name="hint_harga_produk_form">Enter product price</string>
+    <string name="label_stok_produk">Product Stock</string>
+    <string name="hint_stok_produk">Enter stock amount</string>
+    <string name="label_tanpa_batas">Unlimited Stock</string>
+    <string name="label_kategori_produk">Product Category</string>
+    <string name="label_cabang_produk">Product Branch</string>
+    <string name="label_tambah_foto">Add Photo</string>
+    <string name="berhasil_simpan_produk">Product saved successfully!</string>
+    <string name="gagal_simpan_produk">Failed to save product!</string>
+    <string name="berhasil_hapus_produk">Product deleted successfully!</string>
+    <string name="gagal_hapus_produk">Failed to delete product!</string>
+    <string name="gagal_muat_produk">Failed to load product!</string>
+
+    <!-- Form Labels - Category -->
+    <string name="edit_kategori">Edit Category</string>
+    <string name="tambah_kategori">Add Category</string>
+    <string name="label_nama_kategori_form">Category Name</string>
+    <string name="hint_nama_kategori">Enter category name</string>
+    <string name="label_status_kategori">Category Status</string>
+    <string name="data_kategori_kosong">Category data is empty</string>
+    <string name="berhasil_simpan_kategori">Category saved successfully!</string>
+    <string name="gagal_simpan_kategori">Failed to save category!</string>
+    <string name="berhasil_hapus_kategori">Category deleted successfully!</string>
+    <string name="gagal_hapus_kategori">Failed to delete category!</string>
+    
+    <!-- Form Labels - Branch -->
+    <string name="edit_cabang">Edit Branch</string>
+    <string name="tambah_cabang">Add Branch</string>
+    <string name="label_nama_cabang">Branch Name</string>
+    <string name="hint_nama_cabang">Enter branch name</string>
+    <string name="label_alamat_cabang">Branch Address</string>
+    <string name="hint_alamat_cabang">Enter branch address</string>
+    <string name="label_status_cabang">Branch Status</string>
+    <string name="gagal_muat_data_detail">Failed to load data: %1$s</string>
+    <string name="label_foto_cabang">Branch Photo</string>
+    <string name="berhasil_simpan_cabang">Branch saved successfully!</string>
+    <string name="gagal_simpan_cabang">Failed to save branch!</string>
+    <string name="berhasil_hapus_cabang">Branch deleted successfully!</string>
+    <string name="gagal_hapus_cabang">Failed to delete branch!</string>
+
+    <!-- Form Labels - Employee -->
+    <string name="edit_pegawai">Edit Employee</string>
+    <string name="tambah_pegawai">Add Employee</string>
+    <string name="label_nama_pegawai">Employee Name</string>
+    <string name="hint_nama_pegawai">Enter employee name</string>
+    <string name="label_jabatan">Position / Role</string>
+    <string name="label_status_pegawai">Employee Status</string>
+    <string name="label_email_form">Email</string>
+    <string name="hint_email_pegawai">Enter employee email</string>
+    <string name="berhasil_simpan_pegawai">Employee saved successfully!</string>
+    <string name="gagal_simpan_pegawai">Failed to save employee!</string>
+    <string name="berhasil_hapus_pegawai">Employee deleted successfully!</string>
+    <string name="gagal_hapus_pegawai">Failed to delete employee!</string>
+
+    <!-- Form Labels - Customer -->
+    <string name="nama_pelanggan">Customer Name</string>
+    <string name="edit_pelanggan">Edit Customer</string>
+    <string name="tambah_pelanggan">Add Customer</string>
+    <string name="label_nama_pelanggan_form">Customer Name</string>
+    <string name="hint_nama_pelanggan_form">Enter customer name</string>
+    <string name="label_telepon_pelanggan">Phone Number</string>
+    <string name="hint_telepon_pelanggan">Enter phone number</string>
+    <string name="label_alamat_pelanggan">Customer Address</string>
+    <string name="hint_alamat_pelanggan">Enter address (Optional)</string>
+    <string name="hint_email_pelanggan">Enter email (optional)</string>
+    <string name="berhasil_simpan_pelanggan">Customer saved successfully!</string>
+    <string name="gagal_simpan_pelanggan">Failed to save customer!</string>
+    <string name="berhasil_hapus_pelanggan">Customer deleted successfully!</string>
+    <string name="gagal_hapus_pelanggan">Failed to delete customer!</string>
+
+    <!-- Validation Errors -->
+    <string name="error_nama_kategori">Category name cannot be empty</string>
+    <string name="error_nama_produk">Product name cannot be empty</string>
+    <string name="error_harga_produk">Price cannot be empty</string>
+    <string name="error_nama_cabang">Branch name cannot be empty</string>
+    <string name="error_alamat_cabang">Branch address cannot be empty</string>
+    <string name="error_nama_pegawai">Employee name cannot be empty</string>
+    <string name="error_nama_pelanggan">Customer name cannot be empty</string>
+    <string name="error_telp_pelanggan">Phone number cannot be empty</string>
+    <string name="email_kosong">Email cannot be empty</string>
+    <string name="password_kosong">Password cannot be empty</string>
+    <string name="password_minimal">Password must be at least 6 characters</string>
+
+    <!-- Success/Failure Messages -->
+    <string name="berhasil_simpan">Saved successfully!</string>
+    <string name="gagal_simpan">Failed to save!</string>
+    <string name="berhasil_hapus">Deleted successfully!</string>
+    <string name="gagal_hapus">Failed to delete!</string>
+    <string name="login_berhasil">Login Successful!</string>
+    <string name="login_gagal">Incorrect email or password!</string>
+    <string name="daftar_berhasil">Account created successfully! Please login.</string>
+    <string name="daftar_gagal">Failed to create account!</string>
+    <string name="berhasil_logout">Logout Successful</string>
+    <string name="gagal_logout">Failed to Logout</string>
+    <string name="gagal_koneksi">Connection Failed</string>
+    <string name="gagal_muat_data">Failed to load data</string>
+    <string name="gagal_load_pelanggan">Failed to load customer</string>
+    
+
+    <!-- Confirmation Dialogs -->
+    <string name="konfirmasi_hapus_kategori">Are you sure you want to delete this category?</string>
+    <string name="konfirmasi_hapus_produk">Are you sure you want to delete this product?</string>
+    <string name="konfirmasi_hapus_cabang">Are you sure you want to delete this branch?</string>
+    <string name="konfirmasi_hapus_pegawai">Are you sure you want to delete this employee?</string>
+    <string name="konfirmasi_hapus_pelanggan">Are you sure you want to delete this customer?</string>
+    <string name="pesan_logout">Are you sure you want to logout?</string>
+    <string name="konfirmasi_hapus_akun">Are you sure you want to delete your account? All data will be lost forever.</string>
+    <string name="sesi_invalid">Invalid session. Please login again.</string>
+
+
+    <!-- Auth / Login -->
+    <string name="masuk">Login</string>
+    <string name="daftar">Register</string>
+    <string name="label_pos">Point of Sale</string>
+    <string name="label_email">Email</string>
+    <string name="hint_email">Enter email</string>
+    <string name="label_password">Password</string>
+    <string name="hint_password">Enter password</string>
+    <string name="label_belum_punya_akun">Don\'t have an account? Register</string>
+    <string name="label_buat_akun">Create Account</string>
+    <string name="label_daftarkan_akun">Register your account</string>
+    <string name="label_nama_lengkap">Full Name</string>
+    <string name="hint_nama_lengkap">Enter full name</string>
+    <string name="label_nomor_telepon">Phone Number</string>
+    <string name="hint_nomor_telepon">Enter phone number</string>
+    <string name="label_github">GitHub Account</string>
+    <string name="hint_github">Enter GitHub username(Opsional)</string>
+    <string name="label_sudah_punya_akun">Already have an account? Login</string>
+    <string name="proses_masuk">Logging in&#8230;</string>
+    <string name="proses_daftar">Registering&#8230;</string>
+    
+    <string name="nama_kosong">name cannot be empty</string>
+
+    <!-- Transaction / POS -->
+    <string name="label_kasir_pos">POS Cashier</string>
+    <string name="label_kasir">Cashier</string>
+    <string name="pilih_kasir">Select Cashier</string>
+    <string name="tanpa_pelanggan">- No Customer -</string>
+    <string name="keranjang_kosong">Shopping cart is empty!</string>
+    <string name="pilih_cabang">Select Branch</string>
+    <string name="pilih_pelanggan">Select Customer</string>
+    <string name="pilih_kategori">Select Category</string>
+    <string name="item_dipilih">%1$d Item(s) selected</string>
+    <string name="item_dipilih_nol">0 Items selected</string>
+    <string name="total_tagihan">Total Bill: %1$s</string>
+    <string name="kembalian">Change: %1$s</string>
+    <string name="uang_kurang">Insufficient Amount: %1$s</string>
+    <string name="input_bayar">Input payment amount!</string>
+    <string name="bayar_kurang">Payment amount is insufficient!</string>
+    <string name="tunai">Cash</string>
+    <string name="non_tunai">Non-Cash</string>
+    <string name="stok_kurang">Insufficient stock!</string>
+    <string name="pembayaran">Payment</string>
+    <string name="metode_pembayaran">Payment Method</string>
+    <string name="tunai_emoji">💵 Cash</string>
+    <string name="non_tunai_emoji">💳 Non-Cash</string>
+    <string name="jumlah_bayar_tunai">Payment Amount (Cash)</string>
+    <string name="hint_nominal_uang">Enter cash amount</string>
+    <string name="pesan_non_tunai">Payment via Transfer / QRIS / Card</string>
+    <string name="selesaikan_transaksi">Complete Transaction</string>
+    <string name="gagal_simpan_transaksi">Failed to save transaction!</string>
+    <string name="pilih_tipe_non_tunai">Select Payment Method</string>"
+    <string name="qris">QRIS</string>
+    <string name="transfer">Transfer</string>
+    <string name="kartu">Card</string>
+    <string name="pilih_metode_dulu">Choose a payment method first!</string>
+
+    <!-- Receipt / Nota -->
+    <string name="nota_transaksi">Transaction Receipt</string>
+    <string name="nama_toko">Cafe Bianca</string>
+    <string name="pos_label">Point of Sale</string>
+    <string name="pesan_share_nota">Transaction receipt from Cafe Bianca</string>
+    <string name="pilih_share">Share Receipt via</string>
+    <string name="gagal_share">Failed to share receipt: %1$s</string>
+    <string name="label_no_transaksi">Transaction No.</string>
+    <string name="label_tanggal_nota">Date</string>
+    <string name="label_kasir_nota">Cashier</string>
+    <string name="label_pelanggan_nota">Customer</string>
+    <string name="label_metode_bayar">Payment Method</string>
+    <string name="label_item">Item</string>
+    <string name="label_qty">Qty</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_total_nota">Total</string>
+    <string name="label_bayar_nota">Pay</string>
+    <string name="label_kembali_nota">Change</string>
+    <string name="terima_kasih_nota">Thank you for visiting!</string>
+    <string name="btn_share_nota">📤 Share Receipt</string>
+    <string name="btn_print_nota">🖨️ Print Receipt</string>
+    <string name="label_id_titik">Transaction ID: %s</string>
+    <string name="label_tgl_titik">Date : %s</string>
+    <string name="label_kasir_titik">Cashier : %s</string>
+    <string name="label_total_titik">TOTAL : %s</string>
+    <string name="label_bayar_titik">PAID : %s</string>
+    <string name="label_kembali_titik">CHANGE : %s</string>
+    <string name="terima_kasih">Thank You for Your Visit</string>
+
+    <!-- Account / Profile -->
+    <string name="label_profil_akun">Account Profile</string>
+    <string name="label_owner_admin">Owner &amp; Administrator</string>
+    <string name="label_nama_toko">Store Name</string>
+    <string name="label_nama_toko_label">Store Name</string>
+    <string name="label_nama_toko_val">: Cafe Bianca</string>
+    <string name="label_email_label">Email</string>
+    <string name="label_nomor">Phone Number</string>
+    <string name="label_github_label">GitHub Username</string>
+    <string name="label_versi_app">App Version</string>
+    <string name="label_versi_val">: v1.0.0</string>
+    <string name="label_logout_btn">Logout</string>
+    <string name="label_titik_dua">: %1$s</string>
+    <string name="label_edit_profil">Edit Profile</string>
+    <string name="btn_edit_profil">Edit Profile</string>
+    <string name="btn_ganti_password">Change Password</string>
+    <string name="btn_hapus_akun">Delete Account</string>
+    <string name="berhasil_hapus_akun">Account deleted successfully!</string>
+    <string name="gagal_hapus_akun">Failed to delete account!</string>
+
+    <!-- Printer -->
+    <string name="nama_printer">Printer Name</string>
+    <string name="status_printer">Status: %1$s</string>
+    <string name="terhubung">Connected</string>
+    <string name="tidak_terhubung">Disconnected</string>
+    <string name="sambung">Connect</string>
+    <string name="mencari_perangkat">Searching for devices&#8230;</string>
+    <string name="unknown_device">Unknown Device</string>
+    <string name="berhasil_terhubung">Connected successfully!</string>
+    <string name="menghubungkan_ke">Connecting to %1$s&#8230;</string>
+    <string name="gagal_konek">Connection failed: %1$s</string>
+    <string name="label_pengaturan_printer">Printer Settings</string>
+    <string name="label_koneksi_printer">Bluetooth Printer Connection</string>
+    <string name="label_perangkat_bluetooth_tersedia">Available Bluetooth Devices</string>
+    <string name="label_cari_printer_baru">Search for New Printer</string>
+    <string name="proses_print">Sending to Bluetooth printer&#8230;</string>
+    <string name="pencarian_selesai">Search finished</string>
+    <string name="izin_bluetooth_diperlukan">Bluetooth permission is required for this feature</string>
+    <string name="perangkat_terpasang">%1$s (Paired)</string>
+    <string name="aktifkan_bluetooth">Please enable Bluetooth first</string>
+    <string name="gagal_pencarian_izin">Failed to start search: Permission denied</string>
+    <string name="bluetooth_tidak_aktif">Bluetooth is not active</string>
+    <string name="izin_bluetooth_tidak_diberikan">Bluetooth permission not granted</string>
+    <string name="gagal_terhubung">Failed to connect</string>
+
+    <!-- Reports & Dashboard -->
+    <string name="laporan_penjualan">Sales Report</string>
+    <string name="omset">Turnover</string>
+    <string name="riwayat_transaksi">Transaction History</string>
+    <string name="rata_rata">Average</string>
+    <string name="label_hari_ini">Today</string>
+    <string name="label_transaksi">Transaction</string>
+    <string name="label_pendapatan">Revenue</string>
+    <string name="label_pelanggan_dash">Customer</string>
+    <string name="label_kategori_dash">Category</string>
+    <string name="label_laporan">Report</string>
+    <string name="label_menu_tambahan">Additional Menu</string>
+    <string name="label_akun">Account</string>
+    <string name="label_produk">Product</string>
+    <string name="label_pegawai">Employee</string>
+    <string name="label_cabang">Branch</string>
+    <string name="label_printer">Printer</string>
+    <string name="gagal_muat_laporan">Failed to load report!</string>
+
+    <!-- Settings & Modes -->
+    <string name="pilih_mode">Select Display Mode</string>
+    <string name="ikuti_sistem">Follow System</string>
+    <string name="mode_terang">Light Mode</string>
+    <string name="mode_malam">Night Mode</string>
+    <string name="pilih_bahasa">Select Language</string>
+    <string name="menu_ubah_bahasa">Change Language</string>
+    <string name="menu_atur_tema">Set Display Theme</string>
+
+    <!-- Formats -->
+    <string name="format_rupiah">Rp%1$s</string>
+    <string name="format_rupiah_nol">Rp0</string>
+    <string name="format_stok">%1$s Pcs</string>
+    <string name="format_qty">x%1$d</string>
+
+    <!-- Delete Buttons -->
+    <string name="hapus_cabang">Delete Branch</string>
+    <string name="hapus_kategori">Delete Category</string>
+    <string name="hapus_pegawai">Delete Employee</string>
+    <string name="hapus_pelanggan">Delete Customer</string>
+    <string name="hapus_produk">Delete Product</string>
+
+    <string name="pilih_data">Select Data</string>
+
+    <!-- Spinner Arrays -->
+    <string-array name="spinnerStatus">
+        <item>Active</item>
+        <item>Inactive</item>
+    </string-array>
+    <string-array name="spinnerRole">
+        <item>Cashier</item>
+        <item>Admin</item>
+        <item>Manager</item>
+    </string-array>
+    <string-array name="bahasa_options">
+        <item>Follow System (Default)</item>
+        <item>Indonesian</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="mode_options">
+        <item>Follow System</item>
+        <item>Light Mode</item>
+        <item>Night Mode</item>
+    </string-array>
+</resources>

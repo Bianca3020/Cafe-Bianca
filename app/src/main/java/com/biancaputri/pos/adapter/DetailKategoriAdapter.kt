@@ -44,10 +44,14 @@ class DetailKategoriAdapter(
     inner class KategoriViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val tvNama = itemView.findViewById<TextView>(R.id.tvNamaKategori)
+        private val btnAtur = itemView.findViewById<android.widget.Button>(R.id.btnAtur)
 
         fun bind(kategori: ModelKategori) {
             tvNama.text = kategori.namaKategori ?: "-"
             itemView.setOnClickListener {
+                listener?.onItemClick(kategori)
+            }
+            btnAtur.setOnClickListener {
                 listener?.onItemClick(kategori)
             }
         }

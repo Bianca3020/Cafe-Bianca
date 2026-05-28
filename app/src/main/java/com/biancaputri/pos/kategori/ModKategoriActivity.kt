@@ -1,78 +1,87 @@
 package com.biancaputri.pos.kategori
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
+import com.biancaputri.pos.activity.LoginActivity
 import com.biancaputri.pos.R
+import com.biancaputri.pos.model.ModelKategori
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.util.Calendar
 
 class ModKategoriActivity : AppCompatActivity() {
 
-    // Firebase with your specific URL
     private val database = FirebaseDatabase.getInstance(
         "https://cafebianca-default-rtdb.asia-southeast1.firebasedatabase.app/"
     )
-    private val myRef = database.getReference("kategori")
+    private lateinit var myRef: DatabaseReference
+    private lateinit var idAkun: String
 
     private lateinit var btnBack: ImageView
     private lateinit var etNamaKategori: EditText
-    private lateinit var spinnerStatus: Spinner
+    private lateinit var spinnerStatusKategori: Spinner
     private lateinit var btnSimpan: Button
-    private lateinit var tvSapa: TextView // Added this for your greeting!
+    private lateinit var btnHapus: Button
+    private lateinit var tvTitleHeader: TextView
+
+    private var isEditMode = false
+    private var existingKategori: ModelKategori? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_mod_kategori)
 
-        initView()
-        setupEdgeToEdge()
-        setupSpinner()
-        setupButtonActions()
+        // Ambil ID Akun untuk scoping data
+        val prefs = getSharedPreferences("session", Context.MODE_PRIVATE)
+        idAkun = prefs.getString("idAkun", "") ?: ""
+        if (idAkun.isEmpty()) {
+            Toast.makeText(this, "Sesi tidak valid, silakan login kembali", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+            return
+        }
+        myRef = database.getReference("kategori").child(idAkun)
 
-        // 1. Call the dynamic greeting (Make sure tvSapa is in your XML!)
-        updateGreeting("Bianca")
+        initView()
+        setupSpinner()
+
+        @Suppress("DEPRECATION")
+        existingKategori = intent.getParcelableExtra("EXTRA_KATEGORI")
+        if (existingKategori != null) {
+            isEditMode = true
+            tvTitleHeader.text = getString(R.string.edit_kategori)
+            etNamaKategori.setText(existingKategori?.namaKategori)
+            btnHapus.visibility = View.VISIBLE
+
+            val status = existingKategori?.statusKategori
+            if (status == getString(R.string.status_non_aktif)) {
+                spinnerStatusKategori.setSelection(1)
+            } else {
+                spinnerStatusKategori.setSelection(0)
+            }
+        } else {
+            isEditMode = false
+            tvTitleHeader.text = getString(R.string.tambah_kategori)
+            btnHapus.visibility = View.GONE
+        }
+
+        setupButtonActions()
     }
 
     private fun initView() {
         btnBack = findViewById(R.id.btnBack)
         etNamaKategori = findViewById(R.id.etNamaKategori)
-        spinnerStatus = findViewById(R.id.spinnerStatus)
+        spinnerStatusKategori = findViewById(R.id.spinnerStatusKategori)
         btnSimpan = findViewById(R.id.btnSimpan)
-        // tvSapa = findViewById(R.id.tvSapa) // Uncomment this if you added it to XML
-    }
-
-    // 2. Moved inside the class so it can access 'getString'
-    private fun updateGreeting(userName: String) {
-        val calendar = Calendar.getInstance()
-        val hour = calendar.get(Calendar.HOUR_OF_DAY)
-
-        val greetingRes = when (hour) {
-            in 0..10 -> R.string.sapa_pagi
-            in 11..14 -> R.string.sapa_siang
-            in 15..18 -> R.string.sapa_sore
-            else -> R.string.sapa_malam
-        }
-
-        // Checking if tvSapa is initialized to avoid crashes
-        if (::tvSapa.isInitialized) {
-            tvSapa.text = getString(greetingRes, userName)
-        }
-    }
-
-    private fun setupEdgeToEdge() {
-        // Chi's Note: Make sure R.id.main is a ScrollView or change this to match your XML!
-        val mainLayout = findViewById<View>(R.id.main)
-        ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        btnHapus = findViewById(R.id.btnHapus)
+        tvTitleHeader = findViewById(R.id.tvTitleHeader)
     }
 
     private fun setupSpinner() {
@@ -82,7 +91,7 @@ class ModKategoriActivity : AppCompatActivity() {
             android.R.layout.simple_spinner_item
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerStatus.adapter = adapter
+        spinnerStatusKategori.adapter = adapter
     }
 
     private fun setupButtonActions() {
@@ -90,28 +99,49 @@ class ModKategoriActivity : AppCompatActivity() {
 
         btnSimpan.setOnClickListener {
             val namaKategori = etNamaKategori.text.toString().trim()
-            val statusKategori = spinnerStatus.selectedItem.toString()
+            val statusKategori = spinnerStatusKategori.selectedItem.toString()
 
             if (namaKategori.isEmpty()) {
-                etNamaKategori.error = "Nama kategori tidak boleh kosong"
+                etNamaKategori.error = getString(R.string.error_nama_kategori)
                 etNamaKategori.requestFocus()
                 return@setOnClickListener
             }
 
-            // 3. Actually save to Firebase! 🚀
-            val id = myRef.push().key ?: return@setOnClickListener
+            val id = if (isEditMode) {
+                existingKategori?.idKategori ?: return@setOnClickListener
+            } else {
+                myRef.push().key ?: return@setOnClickListener
+            }
+
             val data = mapOf(
-                "id" to id,
-                "nama" to namaKategori,
-                "status" to statusKategori
+                "idKategori" to id,
+                "namaKategori" to namaKategori,
+                "statusKategori" to statusKategori
             )
 
             myRef.child(id).setValue(data).addOnSuccessListener {
-                Toast.makeText(this, "Berhasil simpan ke Firebase!", Toast.LENGTH_SHORT).show()
-                finish() // Go back after saving
+                Toast.makeText(this, getString(R.string.berhasil_simpan), Toast.LENGTH_SHORT).show()
+                finish()
             }.addOnFailureListener {
-                Toast.makeText(this, "Gagal simpan!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.gagal_simpan), Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btnHapus.setOnClickListener {
+            val id = existingKategori?.idKategori ?: return@setOnClickListener
+            androidx.appcompat.app.AlertDialog.Builder(this)
+                .setTitle(getString(R.string.hapus_kategori))
+                .setMessage(getString(R.string.konfirmasi_hapus_kategori))
+                .setPositiveButton(getString(R.string.ya)) { _, _ ->
+                    myRef.child(id).removeValue().addOnSuccessListener {
+                        Toast.makeText(this, getString(R.string.berhasil_hapus), Toast.LENGTH_SHORT).show()
+                        finish()
+                    }.addOnFailureListener {
+                        Toast.makeText(this, getString(R.string.gagal_hapus), Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .setNegativeButton(getString(R.string.tidak), null)
+                .show()
         }
     }
 }

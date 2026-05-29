@@ -36,10 +36,10 @@
 |              Pilih Kasir & Pelanggan              |                                           Update Qty & Checkout                                            |   |        Simpan & **Cetak Ke Printer**         |
 
 ### 👥 Pegawai & Pelanggan
-|                                                                      Data Pegawai                                                                      |                                                                      Data Pelanggan                                                                      |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| <img src="screenshots/pegawai.jpg" width="220"> <img src="screenshots/modpegawai.jpg" width="220"> <img src="screenshots/editpegawai.jpg" width="220"> | <img src="screenshots/pelanggan.jpg" width="220"> <img src="screenshots/modpegawai.jpg" width="220"> <img src="screenshots/editpegawai.jpg" width="220"> |
-|                                                              **Tambah & Edit** Staf Kasir                                                              |                                                               **Tambah & Edit** Pelanggan                                                                |
+|                                                                      Data Pegawai                                                                      |                                                                        Data Pelanggan                                                                        |
+|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| <img src="screenshots/pegawai.jpg" width="220"> <img src="screenshots/modpegawai.jpg" width="100"> <img src="screenshots/editpegawai.jpg" width="100"> | <img src="screenshots/pelanggan.jpg" width="220"> <img src="screenshots/modpelanggan.jpg" width="220"> <img src="screenshots/editpelanggan.jpg" width="220"> |
+|                                                              **Tambah & Edit** Staf Kasir                                                              |                                                                 **Tambah & Edit** Pelanggan                                                                  |
 
 ### 🏢 Cabang & Laporan
 |                                                                  Manajemen Cabang                                                                   |                Laporan Penjualan                |

@@ -22,8 +22,6 @@ import com.biancaputri.pos.R
 import com.biancaputri.pos.model.ModelTransaksi
 import java.io.File
 import java.io.FileOutputStream
-import java.text.SimpleDateFormat
-import java.util.*
 
 class NotaActivity : AppCompatActivity() {
 
@@ -104,14 +102,14 @@ class NotaActivity : AppCompatActivity() {
             val tvNama = TextView(this).apply {
                 text = item.namaProduk ?: "-"
                 textSize = 12f
-                setTextColor(getColor(R.color.text_primary))
+                setTextColor(ViewCompat.MEASURED_STATE_MASK)
                 layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 3f)
             }
 
             val tvQty = TextView(this).apply {
                 text = getString(R.string.format_qty, item.quantity ?: 0)
                 textSize = 12f
-                setTextColor(getColor(R.color.text_secondary))
+                setTextColor(Color.GRAY)
                 gravity = Gravity.CENTER
                 layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
             }
@@ -121,7 +119,7 @@ class NotaActivity : AppCompatActivity() {
             val tvSubtotal = TextView(this).apply {
                 text = getString(R.string.format_rupiah, subtotalFormatted)
                 textSize = 12f
-                setTextColor(getColor(R.color.text_primary))
+                setTextColor(ViewCompat.MEASURED_STATE_MASK)
                 gravity = Gravity.END
                 layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 2f)
             }
@@ -186,17 +184,24 @@ class NotaActivity : AppCompatActivity() {
         }
     }
 
+    private fun centerText(text: String): String {
+        val lineWidth = 32
+        val padding = (lineWidth - text.length) / 2
+        return if (padding > 0) " ".repeat(padding) + text else text
+    }
     private fun printNota() {
         val t = transaksi ?: return
 
         val sb = StringBuilder()
-        sb.append("        ${getString(R.string.nama_toko)}\n")
-        sb.append("==============================\n")
+        sb.append("${centerText(getString(R.string.nama_toko))}\n")
+        sb.append("${centerText("POS System")}\n")
+        sb.append("================================\n")
         sb.append("${getString(R.string.label_id_titik, t.idTransaksi?.takeLast(8)?.uppercase() ?: "")}\n")
         sb.append("${getString(R.string.label_tgl_titik, t.tanggalTransaksi ?: "")}\n")
         sb.append("${getString(R.string.label_kasir_titik, t.kasirName ?: "")}\n")
+        sb.append("${getString(R.string.label_cabang)} : ${t.cabangName ?: "-"}\n")
         sb.append("${getString(R.string.label_metode_bayar)}: ${t.metodePembayaran}\n")
-        sb.append("-----------------------------\n")
+        sb.append("--------------------------------\n")
 
         t.items?.forEach { item ->
             val sub = (item.hargaProduk ?: 0) * (item.quantity ?: 0)
@@ -205,21 +210,21 @@ class NotaActivity : AppCompatActivity() {
             sb.append(" ${item.quantity} x ${item.hargaProduk} = $subFormatted\n")
         }
 
-        sb.append("-----------------------------\n")
+        sb.append("--------------------------------\n")
         val totalFormatted = String.format("%,d", t.totalHarga ?: 0).replace(',', '.')
-        sb.append("${getString(R.string.label_total_titik, getString(R.string.format_rupiah, totalFormatted))}\n")
+        sb.append("${getString(R.string.label_total_titik, totalFormatted)}\n")
         
         if (t.metodePembayaran?.contains(getString(R.string.tunai), ignoreCase = true) == true) {
             val bayarFormatted = String.format("%,d", t.jumlahBayar ?: 0).replace(',', '.')
             val kembaliFormatted = String.format("%,d", t.kembalian ?: 0).replace(',', '.')
-            sb.append("${getString(R.string.label_bayar_titik, getString(R.string.format_rupiah, bayarFormatted))}\n")
-            sb.append("${getString(R.string.label_kembali_titik, getString(R.string.format_rupiah, kembaliFormatted))}\n")
+            sb.append("${getString(R.string.label_bayar_titik, bayarFormatted)}\n")
+            sb.append("${getString(R.string.label_kembali_titik, kembaliFormatted)}\n")
         }
-        sb.append("==============================\n")
-        sb.append("   ${getString(R.string.terima_kasih)}   \n\n\n")
+        sb.append("================================\n")
+        sb.append("${centerText(getString(R.string.terima_kasih))}\n")
+        sb.append("\n\n\n\n")
 
         PrinterActivity.sendPrint(this, sb.toString())
-        Toast.makeText(this, getString(R.string.proses_print), Toast.LENGTH_SHORT).show()
     }
 
     private fun captureCard(view: View): Bitmap {

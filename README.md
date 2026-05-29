@@ -11,25 +11,47 @@
 
 ## 📸 Tampilan Aplikasi (Screenshots)
 
-|                                        Login & Register                                        |                  Dashboard Utama                  |                Manajemen Produk                |
-|:----------------------------------------------------------------------------------------------:|:-------------------------------------------------:|:----------------------------------------------:|
-| <img src="screenshots/login.jpg" width="100"> <img src="screenshots/register.jpg" width="100"> | <img src="screenshots/dashboard.jpg" width="200"> | <img src="screenshots/produk.jpg" width="200"> |
+### 🔐 Autentikasi & Dashboard Utama
+|                     Login                     |                     Register                     |                     Dashboard                     |
+|:---------------------------------------------:|:------------------------------------------------:|:-------------------------------------------------:|
+| <img src="screenshots/login.jpg" width="220"> | <img src="screenshots/register.jpg" width="220"> | <img src="screenshots/dashboard.jpg" width="220"> |
+|              Masuk ke Dashboard               |                   Daftar Akun                    |             Monitoring Ringkasan Data             |
 
-|                 Transaksi Kasir                  |                 Keranjang Belanja                 |                 Nota Digital                 |
-|:------------------------------------------------:|:-------------------------------------------------:|:--------------------------------------------:|
-| <img src="screenshots/transaki.jpg" width="200"> | <img src="screenshots/keranjang.jpg" width="200"> | <img src="screenshots/nota.jpg" width="200"> |
+### 📦 Manajemen Produk & Stok
+|                 Daftar Produk                  |                 Detail/Edit Produk                 |                Tambah Produk Baru                 |
+|:----------------------------------------------:|:--------------------------------------------------:|:-------------------------------------------------:|
+| <img src="Screenshots/produk.jpg" width="220"> | <img src="Screenshots/editproduk.jpg" width="220"> | <img src="screenshots/modproduk.jpg" width="220"> |
+|              Lihat Katalog Produk              |            **Bisa Edit & Update** Data             |           **Bisa Tambah** Produk & Stok           |
 
-|                Manajemen Pelanggan                |                Manajemen Pegawai                |                Manajemen Cabang                |
-|:-------------------------------------------------:|:-----------------------------------------------:|:----------------------------------------------:|
-| <img src="screenshots/pelanggan.jpg" width="200"> | <img src="screenshots/pegawai.jpg" width="200"> | <img src="screenshots/cabang.jpg" width="200"> |
+### 🏷️ Manajemen Kategori
+|                 Daftar Kategori                  |                 Detail/Edit Kategori                 |                   Tambah Kategori                   |
+|:------------------------------------------------:|:----------------------------------------------------:|:---------------------------------------------------:|
+| <img src="screenshots/kategori.jpg" width="220"> | <img src="screenshots/EDITkategori.jpg" width="220"> | <img src="screenshots/modkategori.jpg" width="220"> |
+|            Lihat Klasifikasi Kategori            |                **Bisa Edit** Kategori                |            **Bisa Tambah** Kategori Baru            |
 
-|              Filter Cabang Modern              |                Laporan Penjualan                |               Konfigurasi Printer               |
-|:----------------------------------------------:|:-----------------------------------------------:|:-----------------------------------------------:|
-| <img src="screenshots/filter.jpg" width="200"> | <img src="screenshots/laporan.jpg" width="200"> | <img src="screenshots/printer.jpg" width="200"> |
+### 🛒 Transaksi & Nota Digital
+|                  Alur Transaksi                   |                                             Keranjang Belanja                                              |   |              Cetak Nota Digital              |
+|:-------------------------------------------------:|:----------------------------------------------------------------------------------------------------------:|---|:--------------------------------------------:|
+| <img src="screenshots/transaksi.jpg" width="220"> | <img src="screenshots/paymentcash.jpg" width="220"> <img src="screenshots/paymentnoncash.jpg" width="220"> |   | <img src="screenshots/nota.jpg" width="220"> |
+|              Pilih Kasir & Pelanggan              |                                           Update Qty & Checkout                                            |   |        Simpan & **Cetak Ke Printer**         |
 
-|                Pengaturan Bahasa                 |                 Dark Mode Theme                  |                Akun & Profil                 |
-|:------------------------------------------------:|:------------------------------------------------:|:--------------------------------------------:|
-| <img src="screenshots/language.jpg" width="200"> | <img src="screenshots/darkmode.jpg" width="200"> | <img src="screenshots/akun.jpg" width="200"> |
+### 👥 Pegawai & Pelanggan
+|                                                                      Data Pegawai                                                                      |                                                                      Data Pelanggan                                                                      |
+|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| <img src="screenshots/pegawai.jpg" width="220"> <img src="screenshots/modpegawai.jpg" width="220"> <img src="screenshots/editpegawai.jpg" width="220"> | <img src="screenshots/pelanggan.jpg" width="220"> <img src="screenshots/modpegawai.jpg" width="220"> <img src="screenshots/editpegawai.jpg" width="220"> |
+|                                                              **Tambah & Edit** Staf Kasir                                                              |                                                               **Tambah & Edit** Pelanggan                                                                |
+
+### 🏢 Cabang & Laporan
+|                                                                  Manajemen Cabang                                                                   |                Laporan Penjualan                |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------:|
+| <img src="screenshots/cabang.jpg" width="220"> <img src="screenshots/modcabang.jpg" width="220"> <img src="screenshots/editcabang.jpg" width="220"> | <img src="screenshots/laporan.jpg" width="220"> |
+|                                                           **Tambah & Edit** Lokasi Outlet                                                           |              Rekap Omset & Histori              |
+
+### ⚙️ Pengaturan & Hardware
+|               Konfigurasi Printer               |                   Ganti Bahasa                   |                    Dark Mode                     |
+|:-----------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
+| <img src="screenshots/printer.jpg" width="220"> | <img src="screenshots/language.jpg" width="220"> | <img src="screenshots/darkmode.jpg" width="220"> |
+|            Scan & Connect Bluetooth             |                Mendukung ID / EN                 |           Nyaman di Mata (Dark Theme)            |
 
 ---
 

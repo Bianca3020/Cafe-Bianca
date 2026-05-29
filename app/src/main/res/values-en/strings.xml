@@ -291,10 +291,12 @@
     <string name="izin_bluetooth_diperlukan">Bluetooth permission is required for this feature</string>
     <string name="perangkat_terpasang">%1$s (Paired)</string>
     <string name="aktifkan_bluetooth">Please enable Bluetooth first</string>
+    <string name="aktifkan_gps_scan">Please enable GPS scanning first</string>
     <string name="gagal_pencarian_izin">Failed to start search: Permission denied</string>
     <string name="bluetooth_tidak_aktif">Bluetooth is not active</string>
     <string name="izin_bluetooth_tidak_diberikan">Bluetooth permission not granted</string>
     <string name="gagal_terhubung">Failed to connect</string>
+    <string name="gagal_koneksi_terakhir">Failed to load last time connection: %1$s</string>
 
     <!-- Reports & Dashboard -->
     <string name="laporan_penjualan">Sales Report</string>
@@ -359,4 +361,11 @@
         <item>Light Mode</item>
         <item>Night Mode</item>
     </string-array>
+    <string name="sample_nama_produk">Kopi Tarik</string>
+    <string name="sample_harga_produk">Rp7.000</string>
+    <string name="sample_kategori_produk">Minuman</string>
+    <string name="sample_stok_produk">Unlimited</string>
+    <string name="sample_cabang_produk">Main</string>
+    <string name="cabang_utama">Main Branch</string>
+    <string name="alamat_cabang">Jl. Soekarno Hatta No. 1</string>
 </resources>

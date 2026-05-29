@@ -84,16 +84,12 @@ class ProdukAdapter(
                 txtStok.text = context.getString(R.string.format_stok, (produk.stokProduk ?: 0).toString())
             }
 
-            if (!produk.fotoProduk.isNullOrEmpty()) {
-                Glide.with(context)
-                    .load(produk.fotoProduk)
-                    .placeholder(android.R.drawable.ic_menu_gallery)
-                    .error(android.R.drawable.stat_notify_error)
-                    .centerCrop()
-                    .into(imgProduk)
-            } else {
-                imgProduk.setImageResource(android.R.drawable.ic_menu_gallery)
-            }
+            Glide.with(context)
+                .load(produk.fotoProduk)
+                .placeholder(R.drawable.ic_plus)
+                .error(R.drawable.ic_plus)
+                .centerCrop()
+                .into(imgProduk)
 
             btnAtur.setOnClickListener { listener?.onAturClick(produk) }
         }

@@ -241,12 +241,12 @@
     <string name="terima_kasih_nota">Terima kasih sudah berkunjung!</string>
     <string name="btn_share_nota">📤 Share Nota</string>
     <string name="btn_print_nota">🖨️ Print Nota</string>
-    <string name="label_id_titik">ID Transaksi: %s</string>
-    <string name="label_tgl_titik">Tanggal : %s</string>
-    <string name="label_kasir_titik">Kasir : %s</string>
-    <string name="label_total_titik">TOTAL : %s</string>
-    <string name="label_bayar_titik">BAYAR : %s</string>
-    <string name="label_kembali_titik">KEMBALI : %s</string>
+    <string name="label_id_titik">ID Transaksi: %1$s</string>
+    <string name="label_tgl_titik">Tanggal : %1$s</string>
+    <string name="label_kasir_titik">Kasir : %1$s</string>
+    <string name="label_total_titik">TOTAL : %1$s</string>
+    <string name="label_bayar_titik">BAYAR : %1$s</string>
+    <string name="label_kembali_titik">KEMBALI : %1$s</string>
     <string name="terima_kasih">Terima Kasih Atas Kunjungannya</string>
 
     <!-- Account / Profile -->
@@ -289,10 +289,12 @@
     <string name="izin_bluetooth_diperlukan">Izin Bluetooth diperlukan untuk fitur ini</string>
     <string name="perangkat_terpasang">%1$s (Terpasang)</string>
     <string name="aktifkan_bluetooth">Silakan aktifkan Bluetooth terlebih dahulu</string>
+    <string name="aktifkan_gps_scan">Mohon aktifkan Lokasi (GPS) agar bisa mencari perangkat baru</string>
     <string name="gagal_pencarian_izin">Gagal memulai pencarian: Izin ditolak</string>
     <string name="bluetooth_tidak_aktif">Bluetooth tidak aktif</string>
     <string name="izin_bluetooth_tidak_diberikan">Izin Bluetooth tidak diberikan</string>
     <string name="gagal_terhubung">Gagal terhubung</string>
+    <string name="gagal_koneksi_terakhir">Gagal koneksi terakhir: %1$s</string>
 
     <!-- Reports & Dashboard -->
     <string name="laporan_penjualan">Laporan Penjualan</string>
